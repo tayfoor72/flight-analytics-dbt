@@ -17,3 +17,1117 @@
 15:40:34.553810 [info ]: Started loading project
 15:40:34.554920 [info ]: Finished loading project [  0.00s]
 16:22:57.872891 [info ]: Loading ~/.dbt/profiles.yml
+==================== 2026-04-03T16:44:08.308025Z | 666b770c-0d40-424f-9e81-9604e45de229 ====================
+16:44:08.308058 [info ]: Starting dbt LSP server
+16:44:08.308072 [info ]: Connecting to LSP client on port 8000
+16:44:08.308223 [info ]: Successfully connected to LSP client
+16:44:08.308231 [info ]: Creating LSP service...
+16:44:08.345557 [info ]: Creating LSP server...
+16:44:08.345573 [info ]: Starting LSP server...
+16:44:08.356349 [info ]: Loading ~/.dbt/profiles.yml
+16:44:08.376414 [info ]: Started loading project
+16:44:08.376835 [info ]: Loading ~/.dbt/profiles.yml
+16:44:08.480924 [info ]:    Started resolving packages from packages.yml
+16:44:08.669028 [warn ]: dbt1065: Package 'dbt_utils' requires dbt version [>=1.3.0, <2.0.0], but current version is 2.0.0-preview.154. This package may not be compatible with your dbt version.
+16:44:08.669218 [debug]:    Started loading packages
+16:44:08.669218 [info ]:   Finished [  0.19s] resolving packages from packages.yml (1 items)
+16:44:08.670901 [debug]:     Loaded [  0.00s] packages
+16:44:08.671315 [info ]: Finished loading project [  0.29s]
+16:44:08.671459 [info ]: Started parsing
+16:44:08.690441 [debug]: Finished parsing models/core/schema.yml [  0.00s]
+16:44:08.691016 [debug]: Finished parsing models/intermediate/schema.yml [  0.00s]
+16:44:08.691389 [debug]: Finished parsing models/marts/schema.yml [  0.00s]
+16:44:08.691532 [debug]: Finished parsing models/sources/sources.yml [  0.00s]
+16:44:08.692181 [debug]: Finished parsing models/staging/schema.yml [  0.00s]
+16:44:08.695222 [error]: dbt1060: While parsing config: Ignored unexpected key `"meta"`. YAML path: `columns[0].meta`.
+  --> models/core/schema.yml:9:9
+16:44:08.695753 [error]: dbt1060: While parsing config: Ignored unexpected key `"meta"`. YAML path: `columns[0].meta`.
+  --> models/core/schema.yml:22:9
+16:44:08.695832 [debug]: Finished parsing models/core/dim_airline.sql [  0.00s]
+16:44:08.696004 [error]: dbt1060: While parsing config: Ignored unexpected key `"meta"`. YAML path: `columns[2].meta`.
+  --> models/core/schema.yml:31:9
+16:44:08.696430 [error]: dbt1060: While parsing config: Ignored unexpected key `"meta"`. YAML path: `columns[0].meta`.
+  --> models/core/schema.yml:41:9
+16:44:08.696487 [debug]: Finished parsing models/core/dim_airport.sql [  0.00s]
+16:44:08.696525 [error]: dbt1060: While parsing config: Ignored unexpected key `"meta"`. YAML path: `columns[1].meta`.
+  --> models/core/schema.yml:48:9
+16:44:08.696647 [error]: dbt1060: While parsing config: Ignored unexpected key `"meta"`. YAML path: `columns[2].meta`.
+  --> models/core/schema.yml:57:9
+16:44:08.697048 [error]: dbt1060: While parsing config: Ignored unexpected key `"meta"`. YAML path: `columns[0].meta`.
+  --> models/core/schema.yml:165:9
+16:44:08.697088 [debug]: Finished parsing models/core/dim_routes.sql [  0.00s]
+16:44:08.697117 [error]: dbt1060: While parsing config: Ignored unexpected key `"meta"`. YAML path: `columns[1].meta`.
+  --> models/core/schema.yml:174:9
+16:44:08.697182 [error]: dbt1060: While parsing config: Ignored unexpected key `"meta"`. YAML path: `columns[2].meta`.
+  --> models/core/schema.yml:183:9
+16:44:08.697705 [error]: dbt1060: While parsing config: Ignored unexpected key `"meta"`. YAML path: `columns[0].meta`.
+  --> models/core/schema.yml:80:9
+16:44:08.697746 [debug]: Finished parsing models/core/fct_codeshare.sql [  0.00s]
+16:44:08.697766 [error]: dbt1060: While parsing config: Ignored unexpected key `"meta"`. YAML path: `columns[1].meta`.
+  --> models/core/schema.yml:87:9
+16:44:08.697826 [error]: dbt1060: While parsing config: Ignored unexpected key `"meta"`. YAML path: `columns[2].meta`.
+  --> models/core/schema.yml:96:9
+16:44:08.697887 [error]: dbt1060: While parsing config: Ignored unexpected key `"meta"`. YAML path: `columns[3].meta`.
+  --> models/core/schema.yml:105:9
+16:44:08.697963 [error]: dbt1060: While parsing config: Ignored unexpected key `"meta"`. YAML path: `columns[4].meta`.
+  --> models/core/schema.yml:114:9
+16:44:08.698375 [debug]: Finished parsing models/core/fct_flights.sql [  0.00s]
+16:44:08.698734 [debug]: Finished parsing models/intermediate/int_airport_geography.sql [  0.00s]
+16:44:08.699349 [debug]: Finished parsing models/intermediate/int_flight_airline.sql [  0.00s]
+16:44:08.699600 [debug]: Finished parsing models/intermediate/int_flight_airport.sql [  0.00s]
+16:44:08.699858 [debug]: Finished parsing models/intermediate/int_flight_codeshare.sql [  0.00s]
+16:44:08.700502 [debug]: Finished parsing models/intermediate/int_flight_metrics.sql [  0.00s]
+16:44:08.700803 [debug]: Finished parsing models/intermediate/int_flight_routes_metrics.sql [  0.00s]
+16:44:08.700998 [debug]: Finished parsing models/intermediate/int_flight_routes_spine.sql [  0.00s]
+16:44:08.701206 [debug]: Finished parsing models/intermediate/int_routes_spine.sql [  0.00s]
+16:44:08.701359 [debug]: Finished parsing models/marts/mart_airline_performance.sql [  0.00s]
+16:44:08.701528 [debug]: Finished parsing models/marts/mart_airport_operations.sql [  0.00s]
+16:44:08.701694 [debug]: Finished parsing models/marts/mart_codeshare_complexity.sql [  0.00s]
+16:44:08.701846 [debug]: Finished parsing models/marts/mart_flight_performance.sql [  0.00s]
+16:44:08.701980 [debug]: Finished parsing models/marts/mart_route_performance.sql [  0.00s]
+16:44:08.702124 [debug]: Finished parsing models/staging/stg_airline.sql [  0.00s]
+16:44:08.702303 [debug]: Finished parsing models/staging/stg_airports.sql [  0.00s]
+16:44:08.702432 [debug]: Finished parsing models/staging/stg_arrivals.sql [  0.00s]
+16:44:08.702595 [debug]: Finished parsing models/staging/stg_cities.sql [  0.00s]
+16:44:08.702758 [debug]: Finished parsing models/staging/stg_codeshare.sql [  0.00s]
+16:44:08.702938 [debug]: Finished parsing models/staging/stg_countries.sql [  0.00s]
+16:44:08.703102 [debug]: Finished parsing models/staging/stg_departures.sql [  0.00s]
+16:44:08.703227 [debug]: Finished parsing models/staging/stg_flight_details.sql [  0.00s]
+16:44:08.704625 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/core/schema.yml:63:22
+16:44:08.704732 [debug]: Finished parsing models/staging/stg_routes.sql [  0.00s]
+16:44:08.705228 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/core/schema.yml:54:22
+16:44:08.705477 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/core/schema.yml:68:26
+16:44:08.706089 [error]: dbt0102: Deprecated test arguments: ["combination_of_columns"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/core/schema.yml:200:13
+16:44:08.706332 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/core/schema.yml:171:22
+16:44:08.706478 [error]: dbt0102: Deprecated test arguments: ["values"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/core/schema.yml:194:23
+16:44:08.706790 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/core/schema.yml:189:22
+16:44:08.707034 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/core/schema.yml:180:22
+16:44:08.707550 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/core/schema.yml:111:22
+16:44:08.707688 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["max_value", "min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/core/schema.yml:154:26
+16:44:08.707920 [error]: dbt0102: Deprecated test configs: ["severity", "where"] at top-level detected. Please migrate under the 'config' field.
+  --> models/core/schema.yml:158:25
+16:44:08.708181 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/core/schema.yml:102:22
+16:44:08.708542 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["max_value", "min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/core/schema.yml:144:26
+16:44:08.708702 [error]: dbt0102: Deprecated test configs: ["severity", "where"] at top-level detected. Please migrate under the 'config' field.
+  --> models/core/schema.yml:148:25
+16:44:08.709051 [error]: dbt0102: Deprecated test arguments: ["values"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/core/schema.yml:129:23
+16:44:08.709182 [error]: dbt0102: Deprecated test arguments: ["values"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/core/schema.yml:134:23
+16:44:08.709614 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/core/schema.yml:93:22
+16:44:08.709844 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/core/schema.yml:120:22
+16:44:08.710791 [error]: dbt0102: Deprecated test configs: ["severity"] at top-level detected. Please migrate under the 'config' field.
+  --> models/intermediate/schema.yml:13:25
+16:44:08.710946 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["max_value", "min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/intermediate/schema.yml:18:26
+16:44:08.711142 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["max_value", "min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/intermediate/schema.yml:24:26
+16:44:08.711784 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/intermediate/schema.yml:61:22
+16:44:08.712064 [error]: dbt0102: Deprecated test arguments: ["values"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/intermediate/schema.yml:65:23
+16:44:08.712414 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/intermediate/schema.yml:44:22
+16:44:08.712647 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/intermediate/schema.yml:38:22
+16:44:08.712957 [error]: dbt0102: Deprecated test arguments: ["values"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/intermediate/schema.yml:48:23
+16:44:08.713298 [error]: dbt0102: Deprecated test arguments: ["combination_of_columns"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/intermediate/schema.yml:246:13
+16:44:08.713561 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/intermediate/schema.yml:230:22
+16:44:08.713750 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/intermediate/schema.yml:242:22
+16:44:08.714203 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/intermediate/schema.yml:236:22
+16:44:08.714887 [error]: dbt0102: Deprecated test configs: ["where"] at top-level detected. Please migrate under the 'config' field.
+  --> models/intermediate/schema.yml:149:22
+16:44:08.715036 [error]: dbt0102: Deprecated test configs: ["where"] at top-level detected. Please migrate under the 'config' field.
+  --> models/intermediate/schema.yml:144:22
+16:44:08.715202 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["max_value", "min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/intermediate/schema.yml:172:26
+16:44:08.715362 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["max_value", "min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/intermediate/schema.yml:164:26
+16:44:08.715611 [error]: dbt0102: Deprecated test arguments: ["values"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/intermediate/schema.yml:139:23
+16:44:08.715736 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["max_value", "min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/intermediate/schema.yml:156:26
+16:44:08.716191 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/intermediate/schema.yml:95:22
+16:44:08.716332 [error]: dbt0102: Deprecated test configs: ["severity"] at top-level detected. Please migrate under the 'config' field.
+  --> models/intermediate/schema.yml:124:25
+16:44:08.716528 [error]: dbt0102: Deprecated test configs: ["severity"] at top-level detected. Please migrate under the 'config' field.
+  --> models/intermediate/schema.yml:118:25
+16:44:08.716785 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/intermediate/schema.yml:87:22
+16:44:08.717040 [error]: dbt0102: Deprecated test arguments: ["values"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/intermediate/schema.yml:107:23
+16:44:08.717188 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/intermediate/schema.yml:101:26
+16:44:08.717932 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/intermediate/schema.yml:196:22
+16:44:08.718215 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/intermediate/schema.yml:189:22
+16:44:08.718362 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/intermediate/schema.yml:201:26
+16:44:08.718877 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["max_value", "min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:134:26
+16:44:08.719140 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:116:22
+16:44:08.719433 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:121:26
+16:44:08.719588 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:127:26
+16:44:08.720721 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:86:22
+16:44:08.720856 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:97:26
+16:44:08.721096 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:91:26
+16:44:08.721294 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:103:26
+16:44:08.721702 [error]: dbt0102: Deprecated test arguments: ["combination_of_columns"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:182:13
+16:44:08.721832 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["max_value", "min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:177:26
+16:44:08.722078 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:153:22
+16:44:08.722328 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:146:22
+16:44:08.722441 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:158:26
+16:44:08.722561 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:164:26
+16:44:08.722704 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:170:26
+16:44:08.723194 [error]: dbt0102: Deprecated test arguments: ["combination_of_columns"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:41:13
+16:44:08.723351 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["max_value", "min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:36:26
+16:44:08.723740 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:20:22
+16:44:08.723981 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:13:22
+16:44:08.724133 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:29:26
+16:44:08.724533 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:66:26
+16:44:08.724682 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["max_value", "min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:73:26
+16:44:08.724987 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:55:22
+16:44:08.725139 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:60:26
+16:44:08.725875 [error]: dbt0102: Deprecated test configs: ["severity"] at top-level detected. Please migrate under the 'config' field.
+  --> models/staging/schema.yml:49:25
+16:44:08.727142 [error]: dbt0102: Deprecated test arguments: ["max_value", "min_value"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/staging/schema.yml:251:26
+16:44:08.727271 [error]: dbt0102: Deprecated test arguments: ["max_value", "min_value"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/staging/schema.yml:257:26
+16:44:08.727561 [error]: dbt0102: Deprecated test arguments: ["combination_of_columns"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/staging/schema.yml:286:13
+16:44:08.729689 [error]: dbt0102: Deprecated test arguments: ["values"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/staging/schema.yml:175:23
+16:44:08.731610 [debug]: Finished parsing target/generic_tests/not_null_stg_departures_scheduled_departure_time.sql [  0.00s]
+16:44:08.731687 [debug]: Finished parsing target/generic_tests/relationships_fct_flights_fa8e698f654e6de02d04de684882d6c8.sql [  0.00s]
+16:44:08.731720 [debug]: Finished parsing target/generic_tests/relationships_int_flight_airpo_3a5cd8649184c48de7611eb786fa2dc7.sql [  0.00s]
+16:44:08.731726 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_mart__09b18b405a967b1c414ff172c4c37322.sql [  0.00s]
+16:44:08.731749 [debug]: Finished parsing target/generic_tests/relationships_int_routes_spine_868d8c721813ddf311d1c956bb2e9724.sql [  0.00s]
+16:44:08.731769 [debug]: Finished parsing target/generic_tests/unique_int_flight_routes_metrics_flight_id.sql [  0.00s]
+16:44:08.731780 [debug]: Finished parsing target/generic_tests/relationships_fct_codeshare_4a09ce5bdcb81efd7c68bc13023e88ab.sql [  0.00s]
+16:44:08.731801 [debug]: Finished parsing target/generic_tests/not_null_stg_arrivals_scheduled_arrival_time.sql [  0.00s]
+16:44:08.731863 [debug]: Finished parsing target/generic_tests/not_null_stg_flight_details_airline_id.sql [  0.00s]
+16:44:08.731985 [debug]: Finished parsing target/generic_tests/unique_dim_airline_airline_id.sql [  0.00s]
+16:44:08.732311 [debug]: Finished parsing target/generic_tests/not_null_fct_flights_route_key.sql [  0.00s]
+16:44:08.732434 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_mart__9ccf9072931afa1377128061f94e9258.sql [  0.00s]
+16:44:08.732471 [debug]: Finished parsing target/generic_tests/unique_stg_cities_city_id.sql [  0.00s]
+16:44:08.732487 [debug]: Finished parsing target/generic_tests/not_null_dim_airline_airline_id.sql [  0.00s]
+16:44:08.732693 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_mart__0ba63cdfbdddec6fe7b87d63822ca00f.sql [  0.00s]
+16:44:08.732878 [debug]: Finished parsing target/generic_tests/not_null_int_routes_spine_departure_airport_id.sql [  0.00s]
+16:44:08.732914 [debug]: Finished parsing target/generic_tests/not_null_stg_flight_details_arrival_airport_id.sql [  0.00s]
+16:44:08.732921 [debug]: Finished parsing target/generic_tests/relationships_fct_flights_route_key__route_key__ref_dim_routes_.sql [  0.00s]
+16:44:08.732934 [debug]: Finished parsing target/generic_tests/unique_dim_airport_airport_id.sql [  0.00s]
+16:44:08.732970 [debug]: Finished parsing target/generic_tests/dbt_utils_unique_combination_o_d3c8031a3b64b4c130b35366408fd1b5.sql [  0.00s]
+16:44:08.732976 [debug]: Finished parsing target/generic_tests/not_null_fct_codeshare_operating_airline_id.sql [  0.00s]
+16:44:08.733014 [debug]: Finished parsing target/generic_tests/unique_int_flight_airport_flight_id.sql [  0.00s]
+16:44:08.733026 [debug]: Finished parsing target/generic_tests/not_null_stg_cities_city_id.sql [  0.00s]
+16:44:08.733136 [debug]: Finished parsing target/generic_tests/not_null_int_flight_routes_metrics_flight_id.sql [  0.00s]
+16:44:08.733178 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_mart__3034582d0d8eadc25cbf583362886f1c.sql [  0.00s]
+16:44:08.733627 [debug]: Finished parsing target/generic_tests/not_null_fct_flights_scheduled_departure_time_utc.sql [  0.00s]
+16:44:08.733757 [debug]: Finished parsing target/generic_tests/not_null_stg_flight_details_departure_airport_id.sql [  0.00s]
+16:44:08.733942 [debug]: Finished parsing target/generic_tests/relationships_int_routes_spine_b4469ee18d7f10f55bec252706f23d81.sql [  0.00s]
+16:44:08.733954 [debug]: Finished parsing target/generic_tests/not_null_dim_airport_airport_id.sql [  0.00s]
+16:44:08.734047 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_mart__a0543e0933ad63f549840f98c170ac5e.sql [  0.00s]
+16:44:08.734055 [debug]: Finished parsing target/generic_tests/accepted_values_int_flight_rou_9dcb08ad90bac69d2285f006b7eb7452.sql [  0.00s]
+16:44:08.734089 [debug]: Finished parsing target/generic_tests/relationships_fct_codeshare_9fd0d8e4da9465d76f88414d848c6fda.sql [  0.00s]
+16:44:08.734120 [debug]: Finished parsing target/generic_tests/unique_mart_route_performance_route_key.sql [  0.00s]
+16:44:08.734134 [debug]: Finished parsing target/generic_tests/unique_int_airport_geography_airport_id.sql [  0.00s]
+16:44:08.734147 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_stg_cities_latitude__90___90.sql [  0.00s]
+16:44:08.734172 [debug]: Finished parsing target/generic_tests/unique_stg_flight_details_flight_id.sql [  0.00s]
+16:44:08.734272 [debug]: Finished parsing target/generic_tests/not_null_int_flight_airport_flight_id.sql [  0.00s]
+16:44:08.734591 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_int_f_7898e6c071387c5e02a755db07215bb9.sql [  0.00s]
+16:44:08.734628 [debug]: Finished parsing target/generic_tests/not_null_mart_codeshare_complexity_marketing_airline_id.sql [  0.00s]
+16:44:08.734801 [debug]: Finished parsing target/generic_tests/accepted_values_int_flight_air_28603764044d65ade7ee29c76a6db990.sql [  0.00s]
+16:44:08.734853 [debug]: Finished parsing target/generic_tests/not_null_dim_airport_country_id.sql [  0.00s]
+16:44:08.734867 [debug]: Finished parsing target/generic_tests/not_null_stg_flight_details_flight_id.sql [  0.00s]
+16:44:08.734969 [debug]: Finished parsing target/generic_tests/not_null_fct_flights_arrival_airport_id.sql [  0.00s]
+16:44:08.734992 [debug]: Finished parsing target/generic_tests/not_null_mart_route_performance_route_key.sql [  0.00s]
+16:44:08.734999 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_stg_cities_longitude__180___180.sql [  0.00s]
+16:44:08.735024 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_int_routes_spine_route_distance_km__0.sql [  0.00s]
+16:44:08.735170 [debug]: Finished parsing target/generic_tests/relationships_mart_codeshare_c_1a906754f81d7d25e3316cdf86337dc6.sql [  0.00s]
+16:44:08.735309 [debug]: Finished parsing target/generic_tests/not_null_int_airport_geography_airport_id.sql [  0.00s]
+16:44:08.735579 [debug]: Finished parsing target/generic_tests/not_null_int_flight_routes_spine_arrival_airport_id.sql [  0.00s]
+16:44:08.735731 [debug]: Finished parsing target/generic_tests/dbt_utils_unique_combination_o_bb359a9bfbeda6ee9d203ed4f43e3a85.sql [  0.00s]
+16:44:08.735765 [debug]: Finished parsing target/generic_tests/not_null_dim_routes_arrival_airport_id.sql [  0.00s]
+16:44:08.735784 [debug]: Finished parsing target/generic_tests/not_null_mart_codeshare_complexity_operating_airline_id.sql [  0.00s]
+16:44:08.735793 [debug]: Finished parsing target/generic_tests/relationships_mart_route_perfo_8b11aa7605386fe20392cbe1511b145b.sql [  0.00s]
+16:44:08.735799 [debug]: Finished parsing target/generic_tests/accepted_values_stg_flight_det_26be730bdfbb4b17a53ebbdf584eef5c.sql [  0.00s]
+16:44:08.735871 [debug]: Finished parsing target/generic_tests/unique_int_routes_spine_route_key.sql [  0.00s]
+16:44:08.736379 [debug]: Finished parsing target/generic_tests/relationships_fct_flights_e90f6623544bc38f9e05602f28fe10a4.sql [  0.00s]
+16:44:08.736585 [debug]: Finished parsing target/generic_tests/unique_stg_codeshare_codeshare_id.sql [  0.00s]
+16:44:08.736602 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_mart__1637f8e14e525f628cd62903ad8f5d16.sql [  0.00s]
+16:44:08.736694 [debug]: Finished parsing target/generic_tests/unique_stg_routes_flight_id.sql [  0.00s]
+16:44:08.736701 [debug]: Finished parsing target/generic_tests/relationships_dim_routes_c70513c495e7660201443917ef40ce1e.sql [  0.00s]
+16:44:08.736737 [debug]: Finished parsing target/generic_tests/dbt_utils_unique_combination_o_7627da2caf6b66c45e2c323d32032294.sql [  0.00s]
+16:44:08.736760 [debug]: Finished parsing target/generic_tests/not_null_int_routes_spine_route_key.sql [  0.00s]
+16:44:08.736805 [debug]: Finished parsing target/generic_tests/relationships_int_flight_route_753881f288512c1a23a9a5ed8c45f66e.sql [  0.00s]
+16:44:08.736875 [debug]: Finished parsing target/generic_tests/relationships_mart_codeshare_c_7f388c5a7b2041f8b6bff47d46745b58.sql [  0.00s]
+16:44:08.736996 [debug]: Finished parsing target/generic_tests/not_null_int_airport_geography_country_id.sql [  0.00s]
+16:44:08.737045 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_fct_f_e614ff0d429af8e57bbfe0d8f27f43c8.sql [  0.00s]
+16:44:08.737455 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_mart__688d19c794ef8b7290d1dd87e0383696.sql [  0.00s]
+16:44:08.737488 [debug]: Finished parsing target/generic_tests/not_null_int_flight_routes_spine_arrival_baggage_claim.sql [  0.00s]
+16:44:08.737486 [debug]: Finished parsing target/generic_tests/unique_stg_airline_airline_id.sql [  0.00s]
+16:44:08.737591 [debug]: Finished parsing target/generic_tests/not_null_int_flight_codeshare_flight_id.sql [  0.00s]
+16:44:08.737608 [debug]: Finished parsing target/generic_tests/not_null_dim_routes_departure_airport_id.sql [  0.00s]
+16:44:08.737638 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_int_a_5d62ee63ca2ee4effad22f1d3a313026.sql [  0.00s]
+16:44:08.738249 [debug]: Finished parsing target/generic_tests/not_null_stg_routes_flight_id.sql [  0.00s]
+16:44:08.738269 [debug]: Finished parsing target/generic_tests/not_null_stg_codeshare_codeshare_id.sql [  0.00s]
+16:44:08.738278 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_mart__f54fdd205d50d40eeb026e2dd339a58c.sql [  0.00s]
+16:44:08.738292 [debug]: Finished parsing target/generic_tests/not_null_int_flight_routes_spine_arrival_gate.sql [  0.00s]
+16:44:08.738306 [debug]: Finished parsing target/generic_tests/relationships_dim_routes_4bb509fd1f69c8358f40c3f6cc2a8b20.sql [  0.00s]
+16:44:08.738318 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_mart__b050f83f60c467b6e78e863d58f9e3bb.sql [  0.00s]
+16:44:08.738361 [debug]: Finished parsing target/generic_tests/relationships_int_flight_codes_19b22d83d965b1aa53a69c83bc2d7ff9.sql [  0.00s]
+16:44:08.738377 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_int_a_8355655202034a3d40b4a7df15d4ef4c.sql [  0.00s]
+16:44:08.738654 [debug]: Finished parsing target/generic_tests/not_null_stg_airline_airline_id.sql [  0.00s]
+16:44:08.738797 [debug]: Finished parsing target/generic_tests/unique_stg_routes_route_id.sql [  0.00s]
+16:44:08.738869 [debug]: Finished parsing target/generic_tests/not_null_int_flight_airline_airline_id.sql [  0.00s]
+16:44:08.738882 [debug]: Finished parsing target/generic_tests/not_null_int_flight_routes_spine_departure_airport_id.sql [  0.00s]
+16:44:08.738984 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_dim_routes_route_distance_km__0.sql [  0.00s]
+16:44:08.738997 [debug]: Finished parsing target/generic_tests/not_null_fct_flights_arrival_delay_minutes.sql [  0.00s]
+16:44:08.739040 [debug]: Finished parsing target/generic_tests/not_null_int_flight_codeshare_marketing_airline_id.sql [  0.00s]
+16:44:08.739067 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_mart__b0bd5fbba66862855e9df0a58852b875.sql [  0.00s]
+16:44:08.739088 [debug]: Finished parsing target/generic_tests/not_null_stg_airports_airport_city_id.sql [  0.00s]
+16:44:08.739313 [debug]: Finished parsing target/generic_tests/unique_mart_airline_performance_operating_airline_id.sql [  0.00s]
+16:44:08.739535 [debug]: Finished parsing target/generic_tests/relationships_int_flight_airli_8d6c7d1da9a018eb218e9fb354c0b80b.sql [  0.00s]
+16:44:08.739631 [debug]: Finished parsing target/generic_tests/unique_stg_airports_airport_id.sql [  0.00s]
+16:44:08.739633 [debug]: Finished parsing target/generic_tests/not_null_stg_routes_route_id.sql [  0.00s]
+16:44:08.739765 [debug]: Finished parsing target/generic_tests/not_null_stg_codeshare_flight_id.sql [  0.00s]
+16:44:08.739832 [debug]: Finished parsing target/generic_tests/not_null_fct_flights_departure_airport_id.sql [  0.00s]
+16:44:08.739838 [debug]: Finished parsing target/generic_tests/relationships_int_flight_codes_c08ec12c5485770a7e0c6260751d3269.sql [  0.00s]
+16:44:08.739859 [debug]: Finished parsing target/generic_tests/unique_int_flight_airline_flight_id.sql [  0.00s]
+16:44:08.739862 [debug]: Finished parsing target/generic_tests/relationships_int_flight_route_804c7fb677fb5f1738262f3d6863612c.sql [  0.00s]
+16:44:08.739870 [debug]: Finished parsing target/generic_tests/unique_dim_routes_route_key.sql [  0.00s]
+16:44:08.739879 [debug]: Finished parsing target/generic_tests/not_null_stg_airports_airport_id.sql [  0.00s]
+16:44:08.739897 [debug]: Finished parsing target/generic_tests/not_null_mart_airline_performance_operating_airline_id.sql [  0.00s]
+16:44:08.739927 [debug]: Finished parsing target/generic_tests/dbt_utils_unique_combination_o_b02e54ff0c223229cfbea4d1264f04de.sql [  0.00s]
+16:44:08.740458 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_mart__47726952043a563295fc5abd52642faa.sql [  0.00s]
+16:44:08.740565 [debug]: Finished parsing target/generic_tests/not_null_dim_routes_route_key.sql [  0.00s]
+16:44:08.740579 [debug]: Finished parsing target/generic_tests/relationships_fct_flights_36af4cc9b9079d3ce9dbaeaadbcd2357.sql [  0.00s]
+16:44:08.740580 [debug]: Finished parsing target/generic_tests/unique_int_flight_routes_spine_flight_id.sql [  0.00s]
+16:44:08.740586 [debug]: Finished parsing target/generic_tests/not_null_int_flight_codeshare_operating_airline_id.sql [  0.00s]
+16:44:08.740592 [debug]: Finished parsing target/generic_tests/not_null_stg_codeshare_marketing_airline_id.sql [  0.00s]
+16:44:08.740621 [debug]: Finished parsing target/generic_tests/relationships_mart_airline_per_a68cd3fd44b3b59ad986cc6ed91ad244.sql [  0.00s]
+16:44:08.740637 [debug]: Finished parsing target/generic_tests/not_null_int_flight_airline_flight_id.sql [  0.00s]
+16:44:08.740646 [debug]: Finished parsing target/generic_tests/not_null_stg_arrivals_arrival_airport_id.sql [  0.00s]
+16:44:08.741273 [debug]: Finished parsing target/generic_tests/unique_stg_countries_country_id.sql [  0.00s]
+16:44:08.741279 [debug]: Finished parsing target/generic_tests/unique_stg_arrivals_arrival_id.sql [  0.00s]
+16:44:08.741281 [debug]: Finished parsing target/generic_tests/dbt_utils_unique_combination_o_ec959371ace6168b6eec0911aa1de7df.sql [  0.00s]
+16:44:08.741302 [debug]: Finished parsing target/generic_tests/accepted_values_int_flight_air_532058d65f76f87390c18927677f5a7f.sql [  0.00s]
+16:44:08.741361 [debug]: Finished parsing target/generic_tests/relationships_int_flight_codes_4f0da8f2ff49519edeabf903b3dfe6dd.sql [  0.00s]
+16:44:08.741378 [debug]: Finished parsing target/generic_tests/not_null_int_flight_routes_spine_flight_id.sql [  0.00s]
+16:44:08.741384 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_fct_f_af4dc8d429b4aab1aad08b14c00d613c.sql [  0.00s]
+16:44:08.741441 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_mart__099ed6d95aee73516bbfc84412274284.sql [  0.00s]
+16:44:08.742018 [debug]: Finished parsing target/generic_tests/not_null_stg_countries_country_id.sql [  0.00s]
+16:44:08.742055 [debug]: Finished parsing target/generic_tests/accepted_values_int_flight_rou_a6eb5867c9c7ffa0d06362476f53d4aa.sql [  0.00s]
+16:44:08.742063 [debug]: Finished parsing target/generic_tests/not_null_mart_flight_performance_flight_date.sql [  0.00s]
+16:44:08.742073 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_mart__af843336613d247701a641576f36ef99.sql [  0.00s]
+16:44:08.742091 [debug]: Finished parsing target/generic_tests/not_null_stg_arrivals_arrival_id.sql [  0.00s]
+16:44:08.742098 [debug]: Finished parsing target/generic_tests/not_null_int_flight_airport_arrival_airport_id.sql [  0.00s]
+16:44:08.742130 [debug]: Finished parsing target/generic_tests/not_null_fct_codeshare_flight_id.sql [  0.00s]
+16:44:08.742140 [debug]: Finished parsing target/generic_tests/unique_int_flight_metrics_flight_id.sql [  0.00s]
+16:44:08.742177 [debug]: Finished parsing target/generic_tests/not_null_fct_flights_departure_delay_minutes.sql [  0.00s]
+16:44:08.742843 [debug]: Finished parsing target/generic_tests/not_null_stg_departures_departure_airport_id.sql [  0.00s]
+16:44:08.742944 [debug]: Finished parsing target/generic_tests/not_null_mart_flight_performance_operating_airline_id.sql [  0.00s]
+16:44:08.742955 [debug]: Finished parsing target/generic_tests/not_null_fct_flights_flight_date.sql [  0.00s]
+16:44:08.742966 [debug]: Finished parsing target/generic_tests/unique_stg_arrivals_flight_id.sql [  0.00s]
+16:44:08.742975 [debug]: Finished parsing target/generic_tests/relationships_int_flight_airpo_b136b3024f2f59314d1b16b1d1892dcc.sql [  0.00s]
+16:44:08.743009 [debug]: Finished parsing target/generic_tests/relationships_fct_codeshare_7517903d94038542c7ef809d5bca2667.sql [  0.00s]
+16:44:08.743035 [debug]: Finished parsing target/generic_tests/not_null_int_flight_metrics_flight_id.sql [  0.00s]
+16:44:08.743089 [debug]: Finished parsing target/generic_tests/unique_mart_airport_operations_airport_id.sql [  0.00s]
+16:44:08.743114 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_int_f_9d55c3e84b926486668007668302f9de.sql [  0.00s]
+16:44:08.743457 [debug]: Finished parsing target/generic_tests/unique_fct_flights_flight_id.sql [  0.00s]
+16:44:08.743601 [debug]: Finished parsing target/generic_tests/not_null_int_flight_airport_departure_airport_id.sql [  0.00s]
+16:44:08.743642 [debug]: Finished parsing target/generic_tests/unique_stg_departures_departure_id.sql [  0.00s]
+16:44:08.743689 [debug]: Finished parsing target/generic_tests/not_null_stg_arrivals_flight_id.sql [  0.00s]
+16:44:08.743701 [debug]: Finished parsing target/generic_tests/accepted_values_fct_codeshare_e48f15b0bc38c53a8c1932035988bcca.sql [  0.00s]
+16:44:08.743709 [debug]: Finished parsing target/generic_tests/not_null_int_flight_routes_spine_route_key.sql [  0.00s]
+16:44:08.743716 [debug]: Finished parsing target/generic_tests/not_null_int_flight_routes_metrics_actual_arrival_time_utc.sql [  0.00s]
+16:44:08.743717 [debug]: Finished parsing target/generic_tests/not_null_mart_airport_operations_airport_id.sql [  0.00s]
+16:44:08.743738 [debug]: Finished parsing target/generic_tests/relationships_mart_flight_perf_084ae87417ffbc7e3059025a72da9b7c.sql [  0.00s]
+16:44:08.743809 [debug]: Finished parsing target/generic_tests/not_null_fct_flights_flight_id.sql [  0.00s]
+16:44:08.744195 [debug]: Finished parsing target/generic_tests/not_null_mart_flight_performance_route_key.sql [  0.00s]
+16:44:08.744302 [debug]: Finished parsing target/generic_tests/not_null_fct_codeshare_marketing_airline_id.sql [  0.00s]
+16:44:08.744363 [debug]: Finished parsing target/generic_tests/relationships_mart_airport_ope_de48b7860e9bbabceb481f7e695cf414.sql [  0.00s]
+16:44:08.744394 [debug]: Finished parsing target/generic_tests/not_null_int_flight_routes_spine_scheduled_departure_time_utc.sql [  0.00s]
+16:44:08.744401 [debug]: Finished parsing target/generic_tests/not_null_int_flight_routes_metrics_actual_departure_time_utc.sql [  0.00s]
+16:44:08.744415 [debug]: Finished parsing target/generic_tests/accepted_values_fct_flights_flight_status__landed__cancelled.sql [  0.00s]
+16:44:08.744448 [debug]: Finished parsing target/generic_tests/relationships_mart_flight_perf_19bd7d635be8a930c3142531891b9c83.sql [  0.00s]
+16:44:08.744459 [debug]: Finished parsing target/generic_tests/not_null_stg_departures_departure_id.sql [  0.00s]
+16:44:08.744907 [debug]: Finished parsing target/generic_tests/unique_stg_departures_flight_id.sql [  0.00s]
+16:44:08.744987 [debug]: Finished parsing target/generic_tests/accepted_values_fct_flights_4c0e724c380caad1055c517e29a10259.sql [  0.00s]
+16:44:08.745025 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_mart__5713de1dbd744d4516fe77f55c86855f.sql [  0.00s]
+16:44:08.745055 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_int_f_fa7b88d78998462712b1f433fd9f9d24.sql [  0.00s]
+16:44:08.745184 [debug]: Finished parsing target/generic_tests/not_null_int_routes_spine_arrival_airport_id.sql [  0.00s]
+16:44:08.745403 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_mart__a74fb6e2719710c82ace3e3ebbef0fb8.sql [  0.00s]
+16:44:08.745414 [debug]: Finished parsing target/generic_tests/not_null_stg_departures_flight_id.sql [  0.00s]
+16:44:08.745434 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_int_f_0ac893234faf63c9071efea14c57a00a.sql [  0.00s]
+16:44:08.745469 [debug]: Finished parsing target/generic_tests/not_null_fct_flights_operating_airline_id.sql [  0.00s]
+16:44:08.762784 [info ]: Finished parsing [  0.09s]
+16:44:08.763025 [info ]: Cached model count updated: 27 models (estimate)
+16:44:08.763031 [info ]: Cached model count updated: 27 models (accurate)
+16:44:08.763184 [info ]: Started scheduling
+16:44:08.763439 [info ]: Finished scheduling [  0.00s]
+16:44:08.763447 [debug]: Compilation - 27 nodes selected: {"model.flight_dbt.dim_airline", "model.flight_dbt.dim_airport", "model.flight_dbt.dim_routes", "model.flight_dbt.fct_codeshare", "model.flight_dbt.fct_flights", "model.flight_dbt.int_airport_geography", "model.flight_dbt.int_flight_airline", "model.flight_dbt.int_flight_airport", "model.flight_dbt.int_flight_codeshare", "model.flight_dbt.int_flight_metrics", "model.flight_dbt.int_flight_routes_metrics", "model.flight_dbt.int_flight_routes_spine", "model.flight_dbt.int_routes_spine", "model.flight_dbt.mart_airline_performance", "model.flight_dbt.mart_airport_operations", "model.flight_dbt.mart_codeshare_complexity", "model.flight_dbt.mart_flight_performance", "model.flight_dbt.mart_route_performance", "model.flight_dbt.stg_airline", "model.flight_dbt.stg_airports", "model.flight_dbt.stg_arrivals", "model.flight_dbt.stg_cities", "model.flight_dbt.stg_codeshare", "model.flight_dbt.stg_countries", "model.flight_dbt.stg_departures", "model.flight_dbt.stg_flight_details", "model.flight_dbt.stg_routes"}
+16:44:08.763459 [info ]: Started scheduling
+16:44:08.763647 [info ]: Finished scheduling [  0.00s]
+16:44:08.763728 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "workspace", schema: "flight_analytics", table: "cities" }) and interval: None
+16:44:08.763741 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "workspace", schema: "flight_analytics", table: "countries" }) and interval: None
+16:44:08.763746 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "workspace", schema: "flight_analytics", table: "airports" }) and interval: None
+16:44:08.763750 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "workspace", schema: "flight_analytics", table: "routes" }) and interval: None
+16:44:08.763754 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "workspace", schema: "flight_analytics", table: "departure" }) and interval: None
+16:44:08.763758 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "workspace", schema: "flight_analytics", table: "arrivals" }) and interval: None
+16:44:08.763762 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "workspace", schema: "flight_analytics", table: "airline" }) and interval: None
+16:44:08.763766 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "workspace", schema: "flight_analytics", table: "codeshare" }) and interval: None
+16:44:08.763770 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "workspace", schema: "flight_analytics", table: "flight_details" }) and interval: None
+16:44:08.764141 [info ]: Started downloading schemas
+16:44:09.557228 [warn ]: dbt1014: Failed to download source schema for 'source.flight_dbt.flights.airline'. Setting 'static_analysis' to off. Skipping analysis for 'model.flight_dbt.stg_airline': [BigQuery] googleapi: Error 404: Project workspace is not found. Make sure it references valid GCP project that hasn't been deleted.; Project id: workspace, notFound
+16:44:09.557251 [warn ]: dbt1014: Failed to download source schema for 'source.flight_dbt.flights.airports'. Setting 'static_analysis' to off. Skipping analysis for 'model.flight_dbt.stg_airports': [BigQuery] googleapi: Error 404: Project workspace is not found. Make sure it references valid GCP project that hasn't been deleted.; Project id: workspace, notFound
+16:44:09.557257 [warn ]: dbt1014: Failed to download source schema for 'source.flight_dbt.flights.arrivals'. Setting 'static_analysis' to off. Skipping analysis for 'model.flight_dbt.stg_arrivals': [BigQuery] googleapi: Error 404: Project workspace is not found. Make sure it references valid GCP project that hasn't been deleted.; Project id: workspace, notFound
+16:44:09.557263 [warn ]: dbt1014: Failed to download source schema for 'source.flight_dbt.flights.cities'. Setting 'static_analysis' to off. Skipping analysis for 'model.flight_dbt.stg_cities': [BigQuery] googleapi: Error 404: Project workspace is not found. Make sure it references valid GCP project that hasn't been deleted.; Project id: workspace, notFound
+16:44:09.557269 [warn ]: dbt1014: Failed to download source schema for 'source.flight_dbt.flights.codeshare'. Setting 'static_analysis' to off. Skipping analysis for 'model.flight_dbt.stg_codeshare': [BigQuery] googleapi: Error 404: Project workspace is not found. Make sure it references valid GCP project that hasn't been deleted.; Project id: workspace, notFound
+16:44:09.557274 [warn ]: dbt1014: Failed to download source schema for 'source.flight_dbt.flights.countries'. Setting 'static_analysis' to off. Skipping analysis for 'model.flight_dbt.stg_countries': [BigQuery] googleapi: Error 404: Project workspace is not found. Make sure it references valid GCP project that hasn't been deleted.; Project id: workspace, notFound
+16:44:09.557280 [warn ]: dbt1014: Failed to download source schema for 'source.flight_dbt.flights.departure'. Setting 'static_analysis' to off. Skipping analysis for 'model.flight_dbt.stg_departures': [BigQuery] googleapi: Error 404: Project workspace is not found. Make sure it references valid GCP project that hasn't been deleted.; Project id: workspace, notFound
+16:44:09.557288 [warn ]: dbt1014: Failed to download source schema for 'source.flight_dbt.flights.flight_details'. Setting 'static_analysis' to off. Skipping analysis for 'model.flight_dbt.stg_flight_details': [BigQuery] googleapi: Error 404: Project workspace is not found. Make sure it references valid GCP project that hasn't been deleted.; Project id: workspace, notFound
+16:44:09.557296 [warn ]: dbt1014: Failed to download source schema for 'source.flight_dbt.flights.routes'. Setting 'static_analysis' to off. Skipping analysis for 'model.flight_dbt.stg_routes': [BigQuery] googleapi: Error 404: Project workspace is not found. Make sure it references valid GCP project that hasn't been deleted.; Project id: workspace, notFound
+16:44:09.617989 [info ]: Started building task graph
+16:44:09.618102 [info ]: Finished building task graph [  0.00s]
+16:44:09.618250 [info ]: Started rendering (27 nodes)
+16:44:09.618264 [info ]: Started model mart_models.mart_route_performance
+16:44:09.618274 [debug]: Started rendering model mart_models.mart_route_performance
+16:44:09.618289 [info ]: Started model mart_models.mart_flight_performance
+16:44:09.618293 [debug]: Started rendering model mart_models.mart_flight_performance
+16:44:09.618298 [info ]: Started model mart_models.mart_codeshare_complexity
+16:44:09.618300 [debug]: Started rendering model mart_models.mart_codeshare_complexity
+16:44:09.618304 [info ]: Started model mart_models.mart_airport_operations
+16:44:09.618305 [info ]: Finished downloading schemas [  0.85s]
+16:44:09.618307 [debug]: Started rendering model mart_models.mart_airport_operations
+16:44:09.618311 [info ]: Started model mart_models.mart_airline_performance
+16:44:09.618314 [debug]: Started rendering model mart_models.mart_airline_performance
+16:44:09.618318 [info ]: Started model intermediate_models.int_flight_metrics
+16:44:09.618321 [debug]: Started rendering model intermediate_models.int_flight_metrics
+16:44:09.618326 [info ]: Started model intermediate_models.int_flight_airport
+16:44:09.618328 [debug]: Started rendering model intermediate_models.int_flight_airport
+16:44:09.618332 [info ]: Started model core_models.fct_flights
+16:44:09.618335 [debug]: Started rendering model core_models.fct_flights
+16:44:09.618338 [info ]: Started model intermediate_models.int_flight_airline
+16:44:09.618341 [debug]: Started rendering model intermediate_models.int_flight_airline
+16:44:09.618345 [info ]: Started model core_models.fct_codeshare
+16:44:09.618348 [debug]: Started rendering model core_models.fct_codeshare
+16:44:09.618352 [info ]: Started model intermediate_models.int_flight_routes_metrics
+16:44:09.618356 [debug]: Started rendering model intermediate_models.int_flight_routes_metrics
+16:44:09.618361 [info ]: Started model intermediate_models.int_flight_codeshare
+16:44:09.618364 [debug]: Started rendering model intermediate_models.int_flight_codeshare
+16:44:09.618368 [info ]: Started model staging_models.stg_codeshare
+16:44:09.618371 [debug]: Started rendering model staging_models.stg_codeshare
+16:44:09.618376 [info ]: Started model core_models.dim_routes
+16:44:09.618378 [debug]: Started rendering model core_models.dim_routes
+16:44:09.618382 [info ]: Started model intermediate_models.int_routes_spine
+16:44:09.618385 [debug]: Started rendering model intermediate_models.int_routes_spine
+16:44:09.618391 [info ]: Started model intermediate_models.int_flight_routes_spine
+16:44:09.618394 [debug]: Started rendering model intermediate_models.int_flight_routes_spine
+16:44:09.618397 [info ]: Started model staging_models.stg_routes
+16:44:09.618400 [debug]: Started rendering model staging_models.stg_routes
+16:44:09.618404 [info ]: Started model staging_models.stg_flight_details
+16:44:09.618408 [debug]: Started rendering model staging_models.stg_flight_details
+16:44:09.618412 [info ]: Started model staging_models.stg_departures
+16:44:09.618415 [debug]: Started rendering model staging_models.stg_departures
+16:44:09.618420 [info ]: Started model staging_models.stg_arrivals
+16:44:09.618423 [debug]: Started rendering model staging_models.stg_arrivals
+16:44:09.618427 [info ]: Started model core_models.dim_airport
+16:44:09.618429 [debug]: Started rendering model core_models.dim_airport
+16:44:09.618433 [info ]: Started model intermediate_models.int_airport_geography
+16:44:09.618436 [debug]: Started rendering model intermediate_models.int_airport_geography
+16:44:09.618441 [info ]: Started model staging_models.stg_countries
+16:44:09.618444 [debug]: Started rendering model staging_models.stg_countries
+16:44:09.618448 [info ]: Started model staging_models.stg_cities
+16:44:09.618450 [debug]: Started rendering model staging_models.stg_cities
+16:44:09.618454 [info ]: Started model staging_models.stg_airports
+16:44:09.618457 [debug]: Started rendering model staging_models.stg_airports
+16:44:09.618462 [info ]: Started model core_models.dim_airline
+16:44:09.618464 [debug]: Started rendering model core_models.dim_airline
+16:44:09.618505 [info ]: Started model staging_models.stg_airline
+16:44:09.618521 [debug]: Started rendering model staging_models.stg_airline
+16:44:09.619904 [debug]: Compiled SQL for node model.flight_dbt.mart_airline_performance at target/.lsp/compiled/models/marts/mart_airline_performance.sql
+16:44:09.619960 [debug]: Compiled SQL for node model.flight_dbt.mart_codeshare_complexity at target/.lsp/compiled/models/marts/mart_codeshare_complexity.sql
+16:44:09.619968 [info ]:  Succeeded [  0.00s] model mart_models.mart_airline_performance (table)
+16:44:09.619988 [debug]: Finished rendering [  0.00s] model mart_models.mart_airline_performance [success]
+16:44:09.620023 [debug]: Compiled SQL for node model.flight_dbt.mart_route_performance at target/.lsp/compiled/models/marts/mart_route_performance.sql
+16:44:09.620027 [info ]:  Succeeded [  0.00s] model mart_models.mart_codeshare_complexity (table)
+16:44:09.620047 [info ]:  Succeeded [  0.00s] model mart_models.mart_route_performance (table)
+16:44:09.620055 [debug]: Finished rendering [  0.00s] model mart_models.mart_route_performance [success]
+16:44:09.620123 [debug]: Compiled SQL for node model.flight_dbt.mart_airport_operations at target/.lsp/compiled/models/marts/mart_airport_operations.sql
+16:44:09.620145 [info ]:  Succeeded [  0.00s] model mart_models.mart_airport_operations (table)
+16:44:09.620155 [debug]: Finished rendering [  0.00s] model mart_models.mart_airport_operations [success]
+16:44:09.620208 [debug]: Compiled SQL for node model.flight_dbt.int_flight_metrics at target/.lsp/compiled/models/intermediate/int_flight_metrics.sql
+16:44:09.620222 [info ]:  Succeeded [  0.00s] model intermediate_models.int_flight_metrics (table)
+16:44:09.620238 [debug]: Finished rendering [  0.00s] model intermediate_models.int_flight_metrics [success]
+16:44:09.620253 [debug]: Compiled SQL for node model.flight_dbt.fct_codeshare at target/.lsp/compiled/models/core/fct_codeshare.sql
+16:44:09.620264 [info ]:  Succeeded [  0.00s] model core_models.fct_codeshare (table)
+16:44:09.620281 [debug]: Finished rendering [  0.00s] model core_models.fct_codeshare [success]
+16:44:09.620492 [debug]: Compiled SQL for node model.flight_dbt.int_flight_routes_spine at target/.lsp/compiled/models/intermediate/int_flight_routes_spine.sql
+16:44:09.620504 [debug]: Compiled SQL for node model.flight_dbt.fct_flights at target/.lsp/compiled/models/core/fct_flights.sql
+16:44:09.620529 [info ]:  Succeeded [  0.00s] model core_models.fct_flights (table)
+16:44:09.620537 [info ]:  Succeeded [  0.00s] model intermediate_models.int_flight_routes_spine (table)
+16:44:09.620550 [debug]: Finished rendering [  0.00s] model intermediate_models.int_flight_routes_spine [success]
+16:44:09.620552 [debug]: Compiled SQL for node model.flight_dbt.int_flight_routes_metrics at target/.lsp/compiled/models/intermediate/int_flight_routes_metrics.sql
+16:44:09.620561 [debug]: Finished rendering [  0.00s] model core_models.fct_flights [success]
+16:44:09.620590 [info ]:  Succeeded [  0.00s] model intermediate_models.int_flight_routes_metrics (table)
+16:44:09.620572 [debug]: Finished rendering [  0.00s] model mart_models.mart_codeshare_complexity [success]
+16:44:09.620606 [debug]: Finished rendering [  0.00s] model intermediate_models.int_flight_routes_metrics [success]
+16:44:09.620620 [debug]: Compiled SQL for node model.flight_dbt.stg_departures at target/.lsp/compiled/models/staging/stg_departures.sql
+16:44:09.620644 [info ]:  Succeeded [  0.00s] model staging_models.stg_departures (view)
+16:44:09.620655 [debug]: Finished rendering [  0.00s] model staging_models.stg_departures [success]
+16:44:09.620783 [debug]: Compiled SQL for node model.flight_dbt.int_airport_geography at target/.lsp/compiled/models/intermediate/int_airport_geography.sql
+16:44:09.620811 [info ]:  Succeeded [  0.00s] model intermediate_models.int_airport_geography (table)
+16:44:09.620824 [debug]: Finished rendering [  0.00s] model intermediate_models.int_airport_geography [success]
+16:44:09.620815 [debug]: Compiled SQL for node model.flight_dbt.stg_airline at target/.lsp/compiled/models/staging/stg_airline.sql
+16:44:09.620836 [debug]: Compiled SQL for node model.flight_dbt.dim_routes at target/.lsp/compiled/models/core/dim_routes.sql
+16:44:09.620852 [info ]:  Succeeded [  0.00s] model staging_models.stg_airline (view)
+16:44:09.620861 [debug]: Compiled SQL for node model.flight_dbt.stg_codeshare at target/.lsp/compiled/models/staging/stg_codeshare.sql
+16:44:09.620875 [info ]:  Succeeded [  0.00s] model core_models.dim_routes (table)
+16:44:09.620894 [info ]:  Succeeded [  0.00s] model staging_models.stg_codeshare (view)
+16:44:09.620909 [debug]: Finished rendering [  0.00s] model core_models.dim_routes [success]
+16:44:09.620920 [debug]: Compiled SQL for node model.flight_dbt.mart_flight_performance at target/.lsp/compiled/models/marts/mart_flight_performance.sql
+16:44:09.620939 [info ]:  Succeeded [  0.00s] model mart_models.mart_flight_performance (table)
+16:44:09.620949 [debug]: Finished rendering [  0.00s] model staging_models.stg_codeshare [success]
+16:44:09.620954 [debug]: Finished rendering [  0.00s] model mart_models.mart_flight_performance [success]
+16:44:09.620941 [debug]: Compiled SQL for node model.flight_dbt.int_flight_airport at target/.lsp/compiled/models/intermediate/int_flight_airport.sql
+16:44:09.620958 [debug]: Finished rendering [  0.00s] model staging_models.stg_airline [success]
+16:44:09.620982 [info ]:  Succeeded [  0.00s] model intermediate_models.int_flight_airport (table)
+16:44:09.620995 [debug]: Finished rendering [  0.00s] model intermediate_models.int_flight_airport [success]
+16:44:09.621028 [debug]: Compiled SQL for node model.flight_dbt.dim_airport at target/.lsp/compiled/models/core/dim_airport.sql
+16:44:09.621041 [debug]: Compiled SQL for node model.flight_dbt.int_routes_spine at target/.lsp/compiled/models/intermediate/int_routes_spine.sql
+16:44:09.621059 [info ]:  Succeeded [  0.00s] model intermediate_models.int_routes_spine (table)
+16:44:09.621067 [info ]:  Succeeded [  0.00s] model core_models.dim_airport (table)
+16:44:09.621071 [debug]: Finished rendering [  0.00s] model core_models.dim_airport [success]
+16:44:09.621074 [debug]: Finished rendering [  0.00s] model intermediate_models.int_routes_spine [success]
+16:44:09.621107 [debug]: Compiled SQL for node model.flight_dbt.stg_flight_details at target/.lsp/compiled/models/staging/stg_flight_details.sql
+16:44:09.621121 [info ]:  Succeeded [  0.00s] model staging_models.stg_flight_details (view)
+16:44:09.621128 [debug]: Finished rendering [  0.00s] model staging_models.stg_flight_details [success]
+16:44:09.621221 [debug]: Compiled SQL for node model.flight_dbt.stg_routes at target/.lsp/compiled/models/staging/stg_routes.sql
+16:44:09.621264 [debug]: Compiled SQL for node model.flight_dbt.int_flight_airline at target/.lsp/compiled/models/intermediate/int_flight_airline.sql
+16:44:09.621279 [info ]:  Succeeded [  0.00s] model intermediate_models.int_flight_airline (table)
+16:44:09.621286 [info ]:  Succeeded [  0.00s] model staging_models.stg_routes (view)
+16:44:09.621289 [debug]: Finished rendering [  0.00s] model staging_models.stg_routes [success]
+16:44:09.621291 [debug]: Finished rendering [  0.00s] model intermediate_models.int_flight_airline [success]
+16:44:09.621475 [debug]: Compiled SQL for node model.flight_dbt.stg_arrivals at target/.lsp/compiled/models/staging/stg_arrivals.sql
+16:44:09.621490 [info ]:  Succeeded [  0.00s] model staging_models.stg_arrivals (view)
+16:44:09.621497 [debug]: Finished rendering [  0.00s] model staging_models.stg_arrivals [success]
+16:44:09.621512 [debug]: Compiled SQL for node model.flight_dbt.dim_airline at target/.lsp/compiled/models/core/dim_airline.sql
+16:44:09.621526 [info ]:  Succeeded [  0.00s] model core_models.dim_airline (table)
+16:44:09.621531 [debug]: Finished rendering [  0.00s] model core_models.dim_airline [success]
+16:44:09.621660 [debug]: Compiled SQL for node model.flight_dbt.int_flight_codeshare at target/.lsp/compiled/models/intermediate/int_flight_codeshare.sql
+16:44:09.621667 [debug]: Compiled SQL for node model.flight_dbt.stg_airports at target/.lsp/compiled/models/staging/stg_airports.sql
+16:44:09.621677 [info ]:  Succeeded [  0.00s] model intermediate_models.int_flight_codeshare (table)
+16:44:09.621682 [debug]: Finished rendering [  0.00s] model intermediate_models.int_flight_codeshare [success]
+16:44:09.621687 [info ]:  Succeeded [  0.00s] model staging_models.stg_airports (view)
+16:44:09.621690 [debug]: Finished rendering [  0.00s] model staging_models.stg_airports [success]
+16:44:09.621695 [debug]: Compiled SQL for node model.flight_dbt.stg_cities at target/.lsp/compiled/models/staging/stg_cities.sql
+16:44:09.621708 [info ]:  Succeeded [  0.00s] model staging_models.stg_cities (view)
+16:44:09.621726 [debug]: Finished rendering [  0.00s] model staging_models.stg_cities [success]
+16:44:09.621836 [debug]: Compiled SQL for node model.flight_dbt.stg_countries at target/.lsp/compiled/models/staging/stg_countries.sql
+16:44:09.621853 [info ]:  Succeeded [  0.00s] model staging_models.stg_countries (view)
+16:44:09.621858 [debug]: Finished rendering [  0.00s] model staging_models.stg_countries [success]
+16:44:09.621861 [info ]: Finished rendering [  0.00s] (27 nodes, 0 skipped, 0 errors)
+16:44:09.624812 [info ]: Cached model count updated: 27 models (accurate)
+==================== 2026-04-03T16:44:27.530026Z | 83bfa164-b4bb-4e68-a709-59502f86bc97 ====================
+16:44:27.530057 [info ]: Starting dbt LSP server
+16:44:27.530071 [info ]: Connecting to LSP client on port 8000
+16:44:27.530215 [info ]: Successfully connected to LSP client
+16:44:27.530222 [info ]: Creating LSP service...
+16:44:27.559428 [info ]: Creating LSP server...
+16:44:27.559439 [info ]: Starting LSP server...
+16:44:27.569297 [info ]: Loading ~/.dbt/profiles.yml
+16:44:27.583765 [info ]: Started loading project
+16:44:27.583955 [info ]: Loading ~/.dbt/profiles.yml
+16:44:27.677005 [info ]:    Started resolving packages from packages.yml
+16:44:27.765724 [warn ]: dbt1065: Package 'dbt_utils' requires dbt version [>=1.3.0, <2.0.0], but current version is 2.0.0-preview.154. This package may not be compatible with your dbt version.
+16:44:27.765910 [debug]:    Started loading packages
+16:44:27.765913 [info ]:   Finished [  0.09s] resolving packages from packages.yml (1 items)
+16:44:27.767420 [debug]:     Loaded [  0.00s] packages
+16:44:27.767804 [info ]: Finished loading project [  0.18s]
+16:44:27.767946 [info ]: Started parsing
+16:44:27.783691 [debug]: Finished parsing models/core/schema.yml [  0.00s]
+16:44:27.784168 [debug]: Finished parsing models/intermediate/schema.yml [  0.00s]
+16:44:27.784593 [debug]: Finished parsing models/marts/schema.yml [  0.00s]
+16:44:27.784694 [debug]: Finished parsing models/sources/sources.yml [  0.00s]
+16:44:27.785182 [debug]: Finished parsing models/staging/schema.yml [  0.00s]
+16:44:27.787152 [error]: dbt1060: While parsing config: Ignored unexpected key `"meta"`. YAML path: `columns[0].meta`.
+  --> models/core/schema.yml:9:9
+16:44:27.787544 [error]: dbt1060: While parsing config: Ignored unexpected key `"meta"`. YAML path: `columns[0].meta`.
+  --> models/core/schema.yml:22:9
+16:44:27.787594 [debug]: Finished parsing models/core/dim_airline.sql [  0.00s]
+16:44:27.787632 [error]: dbt1060: While parsing config: Ignored unexpected key `"meta"`. YAML path: `columns[2].meta`.
+  --> models/core/schema.yml:31:9
+16:44:27.788000 [error]: dbt1060: While parsing config: Ignored unexpected key `"meta"`. YAML path: `columns[0].meta`.
+  --> models/core/schema.yml:41:9
+16:44:27.788036 [debug]: Finished parsing models/core/dim_airport.sql [  0.00s]
+16:44:27.788062 [error]: dbt1060: While parsing config: Ignored unexpected key `"meta"`. YAML path: `columns[1].meta`.
+  --> models/core/schema.yml:48:9
+16:44:27.788123 [error]: dbt1060: While parsing config: Ignored unexpected key `"meta"`. YAML path: `columns[2].meta`.
+  --> models/core/schema.yml:57:9
+16:44:27.788478 [error]: dbt1060: While parsing config: Ignored unexpected key `"meta"`. YAML path: `columns[0].meta`.
+  --> models/core/schema.yml:165:9
+16:44:27.788517 [debug]: Finished parsing models/core/dim_routes.sql [  0.00s]
+16:44:27.788565 [error]: dbt1060: While parsing config: Ignored unexpected key `"meta"`. YAML path: `columns[1].meta`.
+  --> models/core/schema.yml:174:9
+16:44:27.788635 [error]: dbt1060: While parsing config: Ignored unexpected key `"meta"`. YAML path: `columns[2].meta`.
+  --> models/core/schema.yml:183:9
+16:44:27.789000 [error]: dbt1060: While parsing config: Ignored unexpected key `"meta"`. YAML path: `columns[0].meta`.
+  --> models/core/schema.yml:80:9
+16:44:27.789099 [debug]: Finished parsing models/core/fct_codeshare.sql [  0.00s]
+16:44:27.789086 [error]: dbt1060: While parsing config: Ignored unexpected key `"meta"`. YAML path: `columns[1].meta`.
+  --> models/core/schema.yml:87:9
+16:44:27.789185 [error]: dbt1060: While parsing config: Ignored unexpected key `"meta"`. YAML path: `columns[2].meta`.
+  --> models/core/schema.yml:96:9
+16:44:27.789272 [error]: dbt1060: While parsing config: Ignored unexpected key `"meta"`. YAML path: `columns[3].meta`.
+  --> models/core/schema.yml:105:9
+16:44:27.789331 [error]: dbt1060: While parsing config: Ignored unexpected key `"meta"`. YAML path: `columns[4].meta`.
+  --> models/core/schema.yml:114:9
+16:44:27.789595 [debug]: Finished parsing models/core/fct_flights.sql [  0.00s]
+16:44:27.789795 [debug]: Finished parsing models/intermediate/int_airport_geography.sql [  0.00s]
+16:44:27.789964 [debug]: Finished parsing models/intermediate/int_flight_airline.sql [  0.00s]
+16:44:27.790281 [debug]: Finished parsing models/intermediate/int_flight_airport.sql [  0.00s]
+16:44:27.790485 [debug]: Finished parsing models/intermediate/int_flight_codeshare.sql [  0.00s]
+16:44:27.790722 [debug]: Finished parsing models/intermediate/int_flight_metrics.sql [  0.00s]
+16:44:27.790980 [debug]: Finished parsing models/intermediate/int_flight_routes_metrics.sql [  0.00s]
+16:44:27.791146 [debug]: Finished parsing models/intermediate/int_flight_routes_spine.sql [  0.00s]
+16:44:27.791297 [debug]: Finished parsing models/intermediate/int_routes_spine.sql [  0.00s]
+16:44:27.791460 [debug]: Finished parsing models/marts/mart_airline_performance.sql [  0.00s]
+16:44:27.791653 [debug]: Finished parsing models/marts/mart_airport_operations.sql [  0.00s]
+16:44:27.791837 [debug]: Finished parsing models/marts/mart_codeshare_complexity.sql [  0.00s]
+16:44:27.791997 [debug]: Finished parsing models/marts/mart_flight_performance.sql [  0.00s]
+16:44:27.792179 [debug]: Finished parsing models/marts/mart_route_performance.sql [  0.00s]
+16:44:27.792355 [debug]: Finished parsing models/staging/stg_airline.sql [  0.00s]
+16:44:27.792547 [debug]: Finished parsing models/staging/stg_airports.sql [  0.00s]
+16:44:27.792712 [debug]: Finished parsing models/staging/stg_arrivals.sql [  0.00s]
+16:44:27.792846 [debug]: Finished parsing models/staging/stg_cities.sql [  0.00s]
+16:44:27.793021 [debug]: Finished parsing models/staging/stg_codeshare.sql [  0.00s]
+16:44:27.793268 [debug]: Finished parsing models/staging/stg_countries.sql [  0.00s]
+16:44:27.793536 [debug]: Finished parsing models/staging/stg_departures.sql [  0.00s]
+16:44:27.793672 [debug]: Finished parsing models/staging/stg_flight_details.sql [  0.00s]
+16:44:27.795188 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/core/schema.yml:63:22
+16:44:27.795258 [debug]: Finished parsing models/staging/stg_routes.sql [  0.00s]
+16:44:27.795625 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/core/schema.yml:54:22
+16:44:27.795761 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/core/schema.yml:68:26
+16:44:27.796240 [error]: dbt0102: Deprecated test arguments: ["combination_of_columns"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/core/schema.yml:200:13
+16:44:27.796424 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/core/schema.yml:171:22
+16:44:27.796543 [error]: dbt0102: Deprecated test arguments: ["values"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/core/schema.yml:194:23
+16:44:27.796726 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/core/schema.yml:189:22
+16:44:27.796998 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/core/schema.yml:180:22
+16:44:27.797460 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/core/schema.yml:111:22
+16:44:27.797588 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["max_value", "min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/core/schema.yml:154:26
+16:44:27.797750 [error]: dbt0102: Deprecated test configs: ["severity", "where"] at top-level detected. Please migrate under the 'config' field.
+  --> models/core/schema.yml:158:25
+16:44:27.798003 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/core/schema.yml:102:22
+16:44:27.798143 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["max_value", "min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/core/schema.yml:144:26
+16:44:27.798305 [error]: dbt0102: Deprecated test configs: ["severity", "where"] at top-level detected. Please migrate under the 'config' field.
+  --> models/core/schema.yml:148:25
+16:44:27.798730 [error]: dbt0102: Deprecated test arguments: ["values"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/core/schema.yml:129:23
+16:44:27.799007 [error]: dbt0102: Deprecated test arguments: ["values"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/core/schema.yml:134:23
+16:44:27.799225 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/core/schema.yml:93:22
+16:44:27.799577 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/core/schema.yml:120:22
+16:44:27.800249 [error]: dbt0102: Deprecated test configs: ["severity"] at top-level detected. Please migrate under the 'config' field.
+  --> models/intermediate/schema.yml:13:25
+16:44:27.800391 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["max_value", "min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/intermediate/schema.yml:18:26
+16:44:27.800520 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["max_value", "min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/intermediate/schema.yml:24:26
+16:44:27.801049 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/intermediate/schema.yml:61:22
+16:44:27.801537 [error]: dbt0102: Deprecated test arguments: ["values"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/intermediate/schema.yml:65:23
+16:44:27.802071 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/intermediate/schema.yml:44:22
+16:44:27.802332 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/intermediate/schema.yml:38:22
+16:44:27.802663 [error]: dbt0102: Deprecated test arguments: ["values"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/intermediate/schema.yml:48:23
+16:44:27.802976 [error]: dbt0102: Deprecated test arguments: ["combination_of_columns"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/intermediate/schema.yml:246:13
+16:44:27.803164 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/intermediate/schema.yml:230:22
+16:44:27.803367 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/intermediate/schema.yml:242:22
+16:44:27.803553 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/intermediate/schema.yml:236:22
+16:44:27.804122 [error]: dbt0102: Deprecated test configs: ["where"] at top-level detected. Please migrate under the 'config' field.
+  --> models/intermediate/schema.yml:149:22
+16:44:27.804269 [error]: dbt0102: Deprecated test configs: ["where"] at top-level detected. Please migrate under the 'config' field.
+  --> models/intermediate/schema.yml:144:22
+16:44:27.804395 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["max_value", "min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/intermediate/schema.yml:172:26
+16:44:27.804518 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["max_value", "min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/intermediate/schema.yml:164:26
+16:44:27.804758 [error]: dbt0102: Deprecated test arguments: ["values"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/intermediate/schema.yml:139:23
+16:44:27.804886 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["max_value", "min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/intermediate/schema.yml:156:26
+16:44:27.805275 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/intermediate/schema.yml:95:22
+16:44:27.805391 [error]: dbt0102: Deprecated test configs: ["severity"] at top-level detected. Please migrate under the 'config' field.
+  --> models/intermediate/schema.yml:124:25
+16:44:27.805573 [error]: dbt0102: Deprecated test configs: ["severity"] at top-level detected. Please migrate under the 'config' field.
+  --> models/intermediate/schema.yml:118:25
+16:44:27.805813 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/intermediate/schema.yml:87:22
+16:44:27.806084 [error]: dbt0102: Deprecated test arguments: ["values"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/intermediate/schema.yml:107:23
+16:44:27.806206 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/intermediate/schema.yml:101:26
+16:44:27.806705 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/intermediate/schema.yml:196:22
+16:44:27.806883 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/intermediate/schema.yml:189:22
+16:44:27.807002 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/intermediate/schema.yml:201:26
+16:44:27.807541 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["max_value", "min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:134:26
+16:44:27.807946 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:116:22
+16:44:27.808107 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:121:26
+16:44:27.808474 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:127:26
+16:44:27.809009 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:86:22
+16:44:27.809134 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:97:26
+16:44:27.809284 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:91:26
+16:44:27.809451 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:103:26
+16:44:27.809864 [error]: dbt0102: Deprecated test arguments: ["combination_of_columns"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:182:13
+16:44:27.810001 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["max_value", "min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:177:26
+16:44:27.810185 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:153:22
+16:44:27.810381 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:146:22
+16:44:27.810520 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:158:26
+16:44:27.810673 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:164:26
+16:44:27.810869 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:170:26
+16:44:27.811305 [error]: dbt0102: Deprecated test arguments: ["combination_of_columns"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:41:13
+16:44:27.811482 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["max_value", "min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:36:26
+16:44:27.811802 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:20:22
+16:44:27.812001 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:13:22
+16:44:27.812153 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:29:26
+16:44:27.812502 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:66:26
+16:44:27.812655 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["max_value", "min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:73:26
+16:44:27.812938 [error]: dbt0102: Deprecated test arguments: ["field", "to"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:55:22
+16:44:27.813054 [error]: dbt0102: Deprecated test configs: ["severity"] and arguments: ["min_value"] at top-level detected. Please migrate to the new format: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/marts/schema.yml:60:26
+16:44:27.813660 [error]: dbt0102: Deprecated test configs: ["severity"] at top-level detected. Please migrate under the 'config' field.
+  --> models/staging/schema.yml:49:25
+16:44:27.814745 [error]: dbt0102: Deprecated test arguments: ["max_value", "min_value"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/staging/schema.yml:251:26
+16:44:27.814868 [error]: dbt0102: Deprecated test arguments: ["max_value", "min_value"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/staging/schema.yml:257:26
+16:44:27.815224 [error]: dbt0102: Deprecated test arguments: ["combination_of_columns"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/staging/schema.yml:286:13
+16:44:27.816851 [error]: dbt0102: Deprecated test arguments: ["values"] at top-level detected. Please migrate to the new format under the 'arguments' field: https://docs.getdbt.com/reference/deprecations#missingargumentspropertyingenerictestdeprecation.
+  --> models/staging/schema.yml:175:23
+16:44:27.818826 [debug]: Finished parsing target/generic_tests/not_null_stg_departures_scheduled_departure_time.sql [  0.00s]
+16:44:27.818926 [debug]: Finished parsing target/generic_tests/relationships_int_routes_spine_868d8c721813ddf311d1c956bb2e9724.sql [  0.00s]
+16:44:27.818965 [debug]: Finished parsing target/generic_tests/relationships_int_flight_airpo_3a5cd8649184c48de7611eb786fa2dc7.sql [  0.00s]
+16:44:27.819060 [debug]: Finished parsing target/generic_tests/not_null_stg_arrivals_scheduled_arrival_time.sql [  0.00s]
+16:44:27.819076 [debug]: Finished parsing target/generic_tests/relationships_fct_flights_fa8e698f654e6de02d04de684882d6c8.sql [  0.00s]
+16:44:27.819078 [debug]: Finished parsing target/generic_tests/unique_dim_airline_airline_id.sql [  0.00s]
+16:44:27.819085 [debug]: Finished parsing target/generic_tests/unique_int_flight_routes_metrics_flight_id.sql [  0.00s]
+16:44:27.819123 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_mart__9ccf9072931afa1377128061f94e9258.sql [  0.00s]
+16:44:27.819170 [debug]: Finished parsing target/generic_tests/relationships_fct_codeshare_4a09ce5bdcb81efd7c68bc13023e88ab.sql [  0.00s]
+16:44:27.819206 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_mart__09b18b405a967b1c414ff172c4c37322.sql [  0.00s]
+16:44:27.819253 [debug]: Finished parsing target/generic_tests/not_null_stg_flight_details_airline_id.sql [  0.00s]
+16:44:27.819766 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_mart__0ba63cdfbdddec6fe7b87d63822ca00f.sql [  0.00s]
+16:44:27.819829 [debug]: Finished parsing target/generic_tests/not_null_int_routes_spine_departure_airport_id.sql [  0.00s]
+16:44:27.819845 [debug]: Finished parsing target/generic_tests/unique_int_flight_airport_flight_id.sql [  0.00s]
+16:44:27.819857 [debug]: Finished parsing target/generic_tests/not_null_fct_flights_route_key.sql [  0.00s]
+16:44:27.819864 [debug]: Finished parsing target/generic_tests/not_null_int_flight_routes_metrics_flight_id.sql [  0.00s]
+16:44:27.819886 [debug]: Finished parsing target/generic_tests/not_null_dim_airline_airline_id.sql [  0.00s]
+16:44:27.819894 [debug]: Finished parsing target/generic_tests/not_null_fct_codeshare_operating_airline_id.sql [  0.00s]
+16:44:27.819907 [debug]: Finished parsing target/generic_tests/dbt_utils_unique_combination_o_d3c8031a3b64b4c130b35366408fd1b5.sql [  0.00s]
+16:44:27.819937 [debug]: Finished parsing target/generic_tests/not_null_stg_flight_details_arrival_airport_id.sql [  0.00s]
+16:44:27.819943 [debug]: Finished parsing target/generic_tests/unique_stg_cities_city_id.sql [  0.00s]
+16:44:27.820281 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_mart__3034582d0d8eadc25cbf583362886f1c.sql [  0.00s]
+16:44:27.820495 [debug]: Finished parsing target/generic_tests/not_null_int_flight_airport_flight_id.sql [  0.00s]
+16:44:27.820528 [debug]: Finished parsing target/generic_tests/relationships_int_routes_spine_b4469ee18d7f10f55bec252706f23d81.sql [  0.00s]
+16:44:27.820565 [debug]: Finished parsing target/generic_tests/not_null_stg_cities_city_id.sql [  0.00s]
+16:44:27.820615 [debug]: Finished parsing target/generic_tests/relationships_fct_flights_route_key__route_key__ref_dim_routes_.sql [  0.00s]
+16:44:27.820629 [debug]: Finished parsing target/generic_tests/accepted_values_int_flight_rou_9dcb08ad90bac69d2285f006b7eb7452.sql [  0.00s]
+16:44:27.820664 [debug]: Finished parsing target/generic_tests/unique_mart_route_performance_route_key.sql [  0.00s]
+16:44:27.820685 [debug]: Finished parsing target/generic_tests/relationships_fct_codeshare_9fd0d8e4da9465d76f88414d848c6fda.sql [  0.00s]
+16:44:27.820696 [debug]: Finished parsing target/generic_tests/unique_dim_airport_airport_id.sql [  0.00s]
+16:44:27.820796 [debug]: Finished parsing target/generic_tests/not_null_stg_flight_details_departure_airport_id.sql [  0.00s]
+16:44:27.820807 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_stg_cities_latitude__90___90.sql [  0.00s]
+16:44:27.820901 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_mart__a0543e0933ad63f549840f98c170ac5e.sql [  0.00s]
+16:44:27.821179 [debug]: Finished parsing target/generic_tests/not_null_fct_flights_arrival_airport_id.sql [  0.00s]
+16:44:27.821184 [debug]: Finished parsing target/generic_tests/not_null_dim_airport_airport_id.sql [  0.00s]
+16:44:27.821188 [debug]: Finished parsing target/generic_tests/accepted_values_int_flight_air_28603764044d65ade7ee29c76a6db990.sql [  0.00s]
+16:44:27.821250 [debug]: Finished parsing target/generic_tests/not_null_fct_flights_scheduled_departure_time_utc.sql [  0.00s]
+16:44:27.821308 [debug]: Finished parsing target/generic_tests/unique_stg_flight_details_flight_id.sql [  0.00s]
+16:44:27.821383 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_int_f_7898e6c071387c5e02a755db07215bb9.sql [  0.00s]
+16:44:27.821417 [debug]: Finished parsing target/generic_tests/not_null_mart_codeshare_complexity_marketing_airline_id.sql [  0.00s]
+16:44:27.821438 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_int_routes_spine_route_distance_km__0.sql [  0.00s]
+16:44:27.821612 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_stg_cities_longitude__180___180.sql [  0.00s]
+16:44:27.821766 [debug]: Finished parsing target/generic_tests/relationships_fct_flights_e90f6623544bc38f9e05602f28fe10a4.sql [  0.00s]
+16:44:27.821773 [debug]: Finished parsing target/generic_tests/not_null_mart_route_performance_route_key.sql [  0.00s]
+16:44:27.821839 [debug]: Finished parsing target/generic_tests/dbt_utils_unique_combination_o_bb359a9bfbeda6ee9d203ed4f43e3a85.sql [  0.00s]
+16:44:27.821845 [debug]: Finished parsing target/generic_tests/not_null_dim_airport_country_id.sql [  0.00s]
+16:44:27.821849 [debug]: Finished parsing target/generic_tests/dbt_utils_unique_combination_o_7627da2caf6b66c45e2c323d32032294.sql [  0.00s]
+16:44:27.821887 [debug]: Finished parsing target/generic_tests/not_null_int_flight_routes_spine_arrival_airport_id.sql [  0.00s]
+16:44:27.821916 [debug]: Finished parsing target/generic_tests/unique_int_routes_spine_route_key.sql [  0.00s]
+16:44:27.821928 [debug]: Finished parsing target/generic_tests/relationships_mart_codeshare_c_1a906754f81d7d25e3316cdf86337dc6.sql [  0.00s]
+16:44:27.821981 [debug]: Finished parsing target/generic_tests/unique_int_airport_geography_airport_id.sql [  0.00s]
+16:44:27.822017 [debug]: Finished parsing target/generic_tests/not_null_stg_flight_details_flight_id.sql [  0.00s]
+16:44:27.822401 [debug]: Finished parsing target/generic_tests/accepted_values_stg_flight_det_26be730bdfbb4b17a53ebbdf584eef5c.sql [  0.00s]
+16:44:27.822432 [debug]: Finished parsing target/generic_tests/not_null_mart_codeshare_complexity_operating_airline_id.sql [  0.00s]
+16:44:27.822434 [debug]: Finished parsing target/generic_tests/not_null_dim_routes_arrival_airport_id.sql [  0.00s]
+16:44:27.822448 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_fct_f_e614ff0d429af8e57bbfe0d8f27f43c8.sql [  0.00s]
+16:44:27.822536 [debug]: Finished parsing target/generic_tests/unique_stg_codeshare_codeshare_id.sql [  0.00s]
+16:44:27.822734 [debug]: Finished parsing target/generic_tests/relationships_mart_route_perfo_8b11aa7605386fe20392cbe1511b145b.sql [  0.00s]
+16:44:27.822810 [debug]: Finished parsing target/generic_tests/not_null_int_routes_spine_route_key.sql [  0.00s]
+16:44:27.822994 [debug]: Finished parsing target/generic_tests/not_null_stg_codeshare_codeshare_id.sql [  0.00s]
+16:44:27.823037 [debug]: Finished parsing target/generic_tests/not_null_fct_flights_arrival_delay_minutes.sql [  0.00s]
+16:44:27.823052 [debug]: Finished parsing target/generic_tests/relationships_int_flight_route_753881f288512c1a23a9a5ed8c45f66e.sql [  0.00s]
+16:44:27.823061 [debug]: Finished parsing target/generic_tests/not_null_int_airport_geography_airport_id.sql [  0.00s]
+16:44:27.823065 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_mart__1637f8e14e525f628cd62903ad8f5d16.sql [  0.00s]
+16:44:27.823072 [debug]: Finished parsing target/generic_tests/not_null_int_flight_codeshare_flight_id.sql [  0.00s]
+16:44:27.823111 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_mart__f54fdd205d50d40eeb026e2dd339a58c.sql [  0.00s]
+16:44:27.823130 [debug]: Finished parsing target/generic_tests/relationships_mart_codeshare_c_7f388c5a7b2041f8b6bff47d46745b58.sql [  0.00s]
+16:44:27.823134 [debug]: Finished parsing target/generic_tests/relationships_dim_routes_c70513c495e7660201443917ef40ce1e.sql [  0.00s]
+16:44:27.823169 [debug]: Finished parsing target/generic_tests/unique_stg_routes_flight_id.sql [  0.00s]
+16:44:27.823351 [debug]: Finished parsing target/generic_tests/not_null_stg_codeshare_flight_id.sql [  0.00s]
+16:44:27.823821 [debug]: Finished parsing target/generic_tests/unique_stg_airline_airline_id.sql [  0.00s]
+16:44:27.823838 [debug]: Finished parsing target/generic_tests/not_null_stg_routes_flight_id.sql [  0.00s]
+16:44:27.823932 [debug]: Finished parsing target/generic_tests/not_null_int_airport_geography_country_id.sql [  0.00s]
+16:44:27.823968 [debug]: Finished parsing target/generic_tests/not_null_dim_routes_departure_airport_id.sql [  0.00s]
+16:44:27.824026 [debug]: Finished parsing target/generic_tests/relationships_int_flight_codes_19b22d83d965b1aa53a69c83bc2d7ff9.sql [  0.00s]
+16:44:27.824034 [debug]: Finished parsing target/generic_tests/not_null_stg_codeshare_marketing_airline_id.sql [  0.00s]
+16:44:27.824088 [debug]: Finished parsing target/generic_tests/not_null_fct_flights_departure_airport_id.sql [  0.00s]
+16:44:27.824141 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_mart__688d19c794ef8b7290d1dd87e0383696.sql [  0.00s]
+16:44:27.824158 [debug]: Finished parsing target/generic_tests/unique_mart_airline_performance_operating_airline_id.sql [  0.00s]
+16:44:27.824170 [debug]: Finished parsing target/generic_tests/not_null_int_flight_routes_spine_arrival_baggage_claim.sql [  0.00s]
+16:44:27.824507 [debug]: Finished parsing target/generic_tests/not_null_stg_airline_airline_id.sql [  0.00s]
+16:44:27.824550 [debug]: Finished parsing target/generic_tests/relationships_dim_routes_4bb509fd1f69c8358f40c3f6cc2a8b20.sql [  0.00s]
+16:44:27.824591 [debug]: Finished parsing target/generic_tests/unique_stg_routes_route_id.sql [  0.00s]
+16:44:27.824646 [debug]: Finished parsing target/generic_tests/relationships_fct_flights_36af4cc9b9079d3ce9dbaeaadbcd2357.sql [  0.00s]
+16:44:27.824664 [debug]: Finished parsing target/generic_tests/not_null_mart_airline_performance_operating_airline_id.sql [  0.00s]
+16:44:27.824885 [debug]: Finished parsing target/generic_tests/not_null_int_flight_routes_spine_arrival_gate.sql [  0.00s]
+16:44:27.824932 [debug]: Finished parsing target/generic_tests/unique_stg_countries_country_id.sql [  0.00s]
+16:44:27.824936 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_int_a_5d62ee63ca2ee4effad22f1d3a313026.sql [  0.00s]
+16:44:27.825106 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_fct_f_af4dc8d429b4aab1aad08b14c00d613c.sql [  0.00s]
+16:44:27.825128 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_dim_routes_route_distance_km__0.sql [  0.00s]
+16:44:27.825133 [debug]: Finished parsing target/generic_tests/not_null_int_flight_codeshare_marketing_airline_id.sql [  0.00s]
+16:44:27.825121 [debug]: Finished parsing target/generic_tests/relationships_mart_airline_per_a68cd3fd44b3b59ad986cc6ed91ad244.sql [  0.00s]
+16:44:27.825250 [debug]: Finished parsing target/generic_tests/not_null_int_flight_routes_spine_departure_airport_id.sql [  0.00s]
+16:44:27.825377 [debug]: Finished parsing target/generic_tests/not_null_stg_airports_airport_city_id.sql [  0.00s]
+16:44:27.825452 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_mart__b050f83f60c467b6e78e863d58f9e3bb.sql [  0.00s]
+16:44:27.825469 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_mart__099ed6d95aee73516bbfc84412274284.sql [  0.00s]
+16:44:27.825702 [debug]: Finished parsing target/generic_tests/unique_dim_routes_route_key.sql [  0.00s]
+16:44:27.825791 [debug]: Finished parsing target/generic_tests/relationships_int_flight_codes_c08ec12c5485770a7e0c6260751d3269.sql [  0.00s]
+16:44:27.825796 [debug]: Finished parsing target/generic_tests/unique_stg_airports_airport_id.sql [  0.00s]
+16:44:27.825799 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_mart__af843336613d247701a641576f36ef99.sql [  0.00s]
+16:44:27.825818 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_int_a_8355655202034a3d40b4a7df15d4ef4c.sql [  0.00s]
+16:44:27.825859 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_mart__b0bd5fbba66862855e9df0a58852b875.sql [  0.00s]
+16:44:27.825851 [debug]: Finished parsing target/generic_tests/not_null_stg_routes_route_id.sql [  0.00s]
+16:44:27.825912 [debug]: Finished parsing target/generic_tests/not_null_fct_flights_departure_delay_minutes.sql [  0.00s]
+16:44:27.825952 [debug]: Finished parsing target/generic_tests/relationships_int_flight_route_804c7fb677fb5f1738262f3d6863612c.sql [  0.00s]
+16:44:27.825996 [debug]: Finished parsing target/generic_tests/not_null_stg_countries_country_id.sql [  0.00s]
+16:44:27.826236 [debug]: Finished parsing target/generic_tests/dbt_utils_unique_combination_o_b02e54ff0c223229cfbea4d1264f04de.sql [  0.00s]
+16:44:27.826252 [debug]: Finished parsing target/generic_tests/not_null_dim_routes_route_key.sql [  0.00s]
+16:44:27.826378 [debug]: Finished parsing target/generic_tests/unique_mart_airport_operations_airport_id.sql [  0.00s]
+16:44:27.826425 [debug]: Finished parsing target/generic_tests/not_null_fct_flights_flight_date.sql [  0.00s]
+16:44:27.826455 [debug]: Finished parsing target/generic_tests/not_null_int_flight_codeshare_operating_airline_id.sql [  0.00s]
+16:44:27.826523 [debug]: Finished parsing target/generic_tests/unique_int_flight_routes_spine_flight_id.sql [  0.00s]
+16:44:27.826580 [debug]: Finished parsing target/generic_tests/not_null_stg_airports_airport_id.sql [  0.00s]
+16:44:27.826636 [debug]: Finished parsing target/generic_tests/not_null_int_flight_airline_airline_id.sql [  0.00s]
+16:44:27.826669 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_mart__47726952043a563295fc5abd52642faa.sql [  0.00s]
+16:44:27.826731 [debug]: Finished parsing target/generic_tests/dbt_utils_unique_combination_o_ec959371ace6168b6eec0911aa1de7df.sql [  0.00s]
+16:44:27.826737 [debug]: Finished parsing target/generic_tests/not_null_stg_departures_departure_airport_id.sql [  0.00s]
+16:44:27.826987 [debug]: Finished parsing target/generic_tests/not_null_int_flight_routes_spine_flight_id.sql [  0.00s]
+16:44:27.827104 [debug]: Finished parsing target/generic_tests/unique_fct_flights_flight_id.sql [  0.00s]
+16:44:27.827142 [debug]: Finished parsing target/generic_tests/relationships_int_flight_codes_4f0da8f2ff49519edeabf903b3dfe6dd.sql [  0.00s]
+16:44:27.827243 [debug]: Finished parsing target/generic_tests/not_null_mart_flight_performance_flight_date.sql [  0.00s]
+16:44:27.827251 [debug]: Finished parsing target/generic_tests/unique_stg_departures_departure_id.sql [  0.00s]
+16:44:27.827268 [debug]: Finished parsing target/generic_tests/relationships_int_flight_airli_8d6c7d1da9a018eb218e9fb354c0b80b.sql [  0.00s]
+16:44:27.827288 [debug]: Finished parsing target/generic_tests/accepted_values_int_flight_rou_a6eb5867c9c7ffa0d06362476f53d4aa.sql [  0.00s]
+16:44:27.827359 [debug]: Finished parsing target/generic_tests/not_null_mart_airport_operations_airport_id.sql [  0.00s]
+16:44:27.827372 [debug]: Finished parsing target/generic_tests/not_null_fct_codeshare_flight_id.sql [  0.00s]
+16:44:27.827414 [debug]: Finished parsing target/generic_tests/unique_int_flight_metrics_flight_id.sql [  0.00s]
+16:44:27.827462 [debug]: Finished parsing target/generic_tests/not_null_stg_arrivals_arrival_airport_id.sql [  0.00s]
+16:44:27.827709 [debug]: Finished parsing target/generic_tests/not_null_fct_flights_flight_id.sql [  0.00s]
+16:44:27.827854 [debug]: Finished parsing target/generic_tests/not_null_stg_departures_departure_id.sql [  0.00s]
+16:44:27.827923 [debug]: Finished parsing target/generic_tests/relationships_mart_airport_ope_de48b7860e9bbabceb481f7e695cf414.sql [  0.00s]
+16:44:27.827954 [debug]: Finished parsing target/generic_tests/unique_stg_arrivals_arrival_id.sql [  0.00s]
+16:44:27.827958 [debug]: Finished parsing target/generic_tests/not_null_mart_flight_performance_operating_airline_id.sql [  0.00s]
+16:44:27.827961 [debug]: Finished parsing target/generic_tests/relationships_fct_codeshare_7517903d94038542c7ef809d5bca2667.sql [  0.00s]
+16:44:27.828087 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_int_f_9d55c3e84b926486668007668302f9de.sql [  0.00s]
+16:44:27.828272 [debug]: Finished parsing target/generic_tests/not_null_int_flight_metrics_flight_id.sql [  0.00s]
+16:44:27.828285 [debug]: Finished parsing target/generic_tests/relationships_mart_flight_perf_084ae87417ffbc7e3059025a72da9b7c.sql [  0.00s]
+16:44:27.828338 [debug]: Finished parsing target/generic_tests/unique_int_flight_airline_flight_id.sql [  0.00s]
+16:44:27.828573 [debug]: Finished parsing target/generic_tests/unique_stg_departures_flight_id.sql [  0.00s]
+16:44:27.828595 [debug]: Finished parsing target/generic_tests/not_null_int_flight_routes_metrics_actual_arrival_time_utc.sql [  0.00s]
+16:44:27.828620 [debug]: Finished parsing target/generic_tests/not_null_mart_flight_performance_route_key.sql [  0.00s]
+16:44:27.828638 [debug]: Finished parsing target/generic_tests/accepted_values_fct_codeshare_e48f15b0bc38c53a8c1932035988bcca.sql [  0.00s]
+16:44:27.828640 [debug]: Finished parsing target/generic_tests/accepted_values_fct_flights_flight_status__landed__cancelled.sql [  0.00s]
+16:44:27.828648 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_mart__5713de1dbd744d4516fe77f55c86855f.sql [  0.00s]
+16:44:27.828678 [debug]: Finished parsing target/generic_tests/not_null_stg_arrivals_arrival_id.sql [  0.00s]
+16:44:27.828767 [debug]: Finished parsing target/generic_tests/not_null_int_flight_routes_spine_route_key.sql [  0.00s]
+16:44:27.828816 [debug]: Finished parsing target/generic_tests/not_null_int_flight_airline_flight_id.sql [  0.00s]
+16:44:27.829092 [debug]: Finished parsing target/generic_tests/unique_stg_arrivals_flight_id.sql [  0.00s]
+16:44:27.829104 [debug]: Finished parsing target/generic_tests/not_null_fct_codeshare_marketing_airline_id.sql [  0.00s]
+16:44:27.829144 [debug]: Finished parsing target/generic_tests/accepted_values_fct_flights_4c0e724c380caad1055c517e29a10259.sql [  0.00s]
+16:44:27.829251 [debug]: Finished parsing target/generic_tests/accepted_values_int_flight_air_532058d65f76f87390c18927677f5a7f.sql [  0.00s]
+16:44:27.829322 [debug]: Finished parsing target/generic_tests/not_null_stg_arrivals_flight_id.sql [  0.00s]
+16:44:27.829343 [debug]: Finished parsing target/generic_tests/not_null_stg_departures_flight_id.sql [  0.00s]
+16:44:27.829354 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_mart__a74fb6e2719710c82ace3e3ebbef0fb8.sql [  0.00s]
+16:44:27.829359 [debug]: Finished parsing target/generic_tests/not_null_int_flight_routes_spine_scheduled_departure_time_utc.sql [  0.00s]
+16:44:27.829406 [debug]: Finished parsing target/generic_tests/relationships_mart_flight_perf_19bd7d635be8a930c3142531891b9c83.sql [  0.00s]
+16:44:27.829478 [debug]: Finished parsing target/generic_tests/not_null_fct_flights_operating_airline_id.sql [  0.00s]
+16:44:27.829492 [debug]: Finished parsing target/generic_tests/not_null_int_flight_airport_arrival_airport_id.sql [  0.00s]
+16:44:27.829515 [debug]: Finished parsing target/generic_tests/not_null_int_flight_routes_metrics_actual_departure_time_utc.sql [  0.00s]
+16:44:27.829545 [debug]: Finished parsing target/generic_tests/not_null_int_routes_spine_arrival_airport_id.sql [  0.00s]
+16:44:27.829680 [debug]: Finished parsing target/generic_tests/relationships_int_flight_airpo_b136b3024f2f59314d1b16b1d1892dcc.sql [  0.00s]
+16:44:27.829725 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_int_f_fa7b88d78998462712b1f433fd9f9d24.sql [  0.00s]
+16:44:27.829828 [debug]: Finished parsing target/generic_tests/not_null_int_flight_airport_departure_airport_id.sql [  0.00s]
+16:44:27.829884 [debug]: Finished parsing target/generic_tests/dbt_utils_accepted_range_int_f_0ac893234faf63c9071efea14c57a00a.sql [  0.00s]
+16:44:27.846727 [info ]: Finished parsing [  0.08s]
+16:44:27.846949 [info ]: Cached model count updated: 27 models (estimate)
+16:44:27.846954 [info ]: Cached model count updated: 27 models (accurate)
+16:44:27.847094 [info ]: Started scheduling
+16:44:27.847334 [info ]: Finished scheduling [  0.00s]
+16:44:27.847341 [debug]: Compilation - 27 nodes selected: {"model.flight_dbt.dim_airline", "model.flight_dbt.dim_airport", "model.flight_dbt.dim_routes", "model.flight_dbt.fct_codeshare", "model.flight_dbt.fct_flights", "model.flight_dbt.int_airport_geography", "model.flight_dbt.int_flight_airline", "model.flight_dbt.int_flight_airport", "model.flight_dbt.int_flight_codeshare", "model.flight_dbt.int_flight_metrics", "model.flight_dbt.int_flight_routes_metrics", "model.flight_dbt.int_flight_routes_spine", "model.flight_dbt.int_routes_spine", "model.flight_dbt.mart_airline_performance", "model.flight_dbt.mart_airport_operations", "model.flight_dbt.mart_codeshare_complexity", "model.flight_dbt.mart_flight_performance", "model.flight_dbt.mart_route_performance", "model.flight_dbt.stg_airline", "model.flight_dbt.stg_airports", "model.flight_dbt.stg_arrivals", "model.flight_dbt.stg_cities", "model.flight_dbt.stg_codeshare", "model.flight_dbt.stg_countries", "model.flight_dbt.stg_departures", "model.flight_dbt.stg_flight_details", "model.flight_dbt.stg_routes"}
+16:44:27.847354 [info ]: Started scheduling
+16:44:27.847533 [info ]: Finished scheduling [  0.00s]
+16:44:27.847620 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "workspace", schema: "flight_analytics", table: "airports" }) and interval: None
+16:44:27.847628 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "workspace", schema: "flight_analytics", table: "codeshare" }) and interval: None
+16:44:27.847632 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "workspace", schema: "flight_analytics", table: "routes" }) and interval: None
+16:44:27.847636 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "workspace", schema: "flight_analytics", table: "cities" }) and interval: None
+16:44:27.847640 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "workspace", schema: "flight_analytics", table: "arrivals" }) and interval: None
+16:44:27.847643 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "workspace", schema: "flight_analytics", table: "departure" }) and interval: None
+16:44:27.847647 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "workspace", schema: "flight_analytics", table: "airline" }) and interval: None
+16:44:27.847651 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "workspace", schema: "flight_analytics", table: "flight_details" }) and interval: None
+16:44:27.847655 [debug]: Initializing schema store with entry: Frontier(CanonicalFqn { catalog: "workspace", schema: "flight_analytics", table: "countries" }) and interval: None
+16:44:27.848049 [info ]: Started downloading schemas
+16:44:28.659041 [warn ]: dbt1014: Failed to download source schema for 'source.flight_dbt.flights.airline'. Setting 'static_analysis' to off. Skipping analysis for 'model.flight_dbt.stg_airline': [BigQuery] googleapi: Error 404: Project workspace is not found. Make sure it references valid GCP project that hasn't been deleted.; Project id: workspace, notFound
+16:44:28.659082 [warn ]: dbt1014: Failed to download source schema for 'source.flight_dbt.flights.airports'. Setting 'static_analysis' to off. Skipping analysis for 'model.flight_dbt.stg_airports': [BigQuery] googleapi: Error 404: Project workspace is not found. Make sure it references valid GCP project that hasn't been deleted.; Project id: workspace, notFound
+16:44:28.659094 [warn ]: dbt1014: Failed to download source schema for 'source.flight_dbt.flights.arrivals'. Setting 'static_analysis' to off. Skipping analysis for 'model.flight_dbt.stg_arrivals': [BigQuery] googleapi: Error 404: Project workspace is not found. Make sure it references valid GCP project that hasn't been deleted.; Project id: workspace, notFound
+16:44:28.659107 [warn ]: dbt1014: Failed to download source schema for 'source.flight_dbt.flights.cities'. Setting 'static_analysis' to off. Skipping analysis for 'model.flight_dbt.stg_cities': [BigQuery] googleapi: Error 404: Project workspace is not found. Make sure it references valid GCP project that hasn't been deleted.; Project id: workspace, notFound
+16:44:28.659121 [warn ]: dbt1014: Failed to download source schema for 'source.flight_dbt.flights.codeshare'. Setting 'static_analysis' to off. Skipping analysis for 'model.flight_dbt.stg_codeshare': [BigQuery] googleapi: Error 404: Project workspace is not found. Make sure it references valid GCP project that hasn't been deleted.; Project id: workspace, notFound
+16:44:28.659137 [warn ]: dbt1014: Failed to download source schema for 'source.flight_dbt.flights.countries'. Setting 'static_analysis' to off. Skipping analysis for 'model.flight_dbt.stg_countries': [BigQuery] googleapi: Error 404: Project workspace is not found. Make sure it references valid GCP project that hasn't been deleted.; Project id: workspace, notFound
+16:44:28.659154 [warn ]: dbt1014: Failed to download source schema for 'source.flight_dbt.flights.departure'. Setting 'static_analysis' to off. Skipping analysis for 'model.flight_dbt.stg_departures': [BigQuery] googleapi: Error 404: Project workspace is not found. Make sure it references valid GCP project that hasn't been deleted.; Project id: workspace, notFound
+16:44:28.659171 [warn ]: dbt1014: Failed to download source schema for 'source.flight_dbt.flights.flight_details'. Setting 'static_analysis' to off. Skipping analysis for 'model.flight_dbt.stg_flight_details': [BigQuery] googleapi: Error 404: Project workspace is not found. Make sure it references valid GCP project that hasn't been deleted.; Project id: workspace, notFound
+16:44:28.659185 [warn ]: dbt1014: Failed to download source schema for 'source.flight_dbt.flights.routes'. Setting 'static_analysis' to off. Skipping analysis for 'model.flight_dbt.stg_routes': [BigQuery] googleapi: Error 404: Project workspace is not found. Make sure it references valid GCP project that hasn't been deleted.; Project id: workspace, notFound
+16:44:28.735460 [info ]: Started building task graph
+16:44:28.735585 [info ]: Finished building task graph [  0.00s]
+16:44:28.735757 [info ]: Started rendering (27 nodes)
+16:44:28.735774 [info ]: Started model mart_models.mart_route_performance
+16:44:28.735786 [debug]: Started rendering model mart_models.mart_route_performance
+16:44:28.735804 [info ]: Started model mart_models.mart_flight_performance
+16:44:28.735808 [debug]: Started rendering model mart_models.mart_flight_performance
+16:44:28.735813 [info ]: Started model mart_models.mart_codeshare_complexity
+16:44:28.735816 [debug]: Started rendering model mart_models.mart_codeshare_complexity
+16:44:28.735820 [info ]: Started model mart_models.mart_airport_operations
+16:44:28.735824 [debug]: Started rendering model mart_models.mart_airport_operations
+16:44:28.735829 [info ]: Started model mart_models.mart_airline_performance
+16:44:28.735831 [debug]: Started rendering model mart_models.mart_airline_performance
+16:44:28.735835 [info ]: Started model intermediate_models.int_flight_metrics
+16:44:28.735839 [debug]: Started rendering model intermediate_models.int_flight_metrics
+16:44:28.735846 [info ]: Started model intermediate_models.int_flight_airport
+16:44:28.735849 [debug]: Started rendering model intermediate_models.int_flight_airport
+16:44:28.735853 [info ]: Started model core_models.fct_flights
+16:44:28.735856 [debug]: Started rendering model core_models.fct_flights
+16:44:28.735861 [info ]: Started model intermediate_models.int_flight_airline
+16:44:28.735863 [debug]: Started rendering model intermediate_models.int_flight_airline
+16:44:28.735823 [info ]: Finished downloading schemas [  0.89s]
+16:44:28.735867 [info ]: Started model core_models.fct_codeshare
+16:44:28.735884 [debug]: Started rendering model core_models.fct_codeshare
+16:44:28.735893 [info ]: Started model intermediate_models.int_flight_routes_metrics
+16:44:28.735897 [debug]: Started rendering model intermediate_models.int_flight_routes_metrics
+16:44:28.735903 [info ]: Started model intermediate_models.int_flight_codeshare
+16:44:28.735906 [debug]: Started rendering model intermediate_models.int_flight_codeshare
+16:44:28.735913 [info ]: Started model staging_models.stg_codeshare
+16:44:28.735917 [debug]: Started rendering model staging_models.stg_codeshare
+16:44:28.735924 [info ]: Started model core_models.dim_routes
+16:44:28.735929 [debug]: Started rendering model core_models.dim_routes
+16:44:28.735933 [info ]: Started model intermediate_models.int_routes_spine
+16:44:28.735941 [debug]: Started rendering model intermediate_models.int_routes_spine
+16:44:28.735947 [info ]: Started model intermediate_models.int_flight_routes_spine
+16:44:28.735950 [debug]: Started rendering model intermediate_models.int_flight_routes_spine
+16:44:28.735954 [info ]: Started model staging_models.stg_routes
+16:44:28.735958 [debug]: Started rendering model staging_models.stg_routes
+16:44:28.735964 [info ]: Started model staging_models.stg_flight_details
+16:44:28.735968 [debug]: Started rendering model staging_models.stg_flight_details
+16:44:28.735974 [info ]: Started model staging_models.stg_departures
+16:44:28.735977 [debug]: Started rendering model staging_models.stg_departures
+16:44:28.735998 [info ]: Started model staging_models.stg_arrivals
+16:44:28.736006 [debug]: Started rendering model staging_models.stg_arrivals
+16:44:28.736014 [info ]: Started model core_models.dim_airport
+16:44:28.736019 [debug]: Started rendering model core_models.dim_airport
+16:44:28.736025 [info ]: Started model intermediate_models.int_airport_geography
+16:44:28.736028 [debug]: Started rendering model intermediate_models.int_airport_geography
+16:44:28.736033 [info ]: Started model staging_models.stg_countries
+16:44:28.736036 [debug]: Started rendering model staging_models.stg_countries
+16:44:28.736040 [info ]: Started model staging_models.stg_cities
+16:44:28.736045 [debug]: Started rendering model staging_models.stg_cities
+16:44:28.736050 [info ]: Started model staging_models.stg_airports
+16:44:28.736052 [debug]: Started rendering model staging_models.stg_airports
+16:44:28.736056 [info ]: Started model core_models.dim_airline
+16:44:28.736058 [debug]: Started rendering model core_models.dim_airline
+16:44:28.736063 [info ]: Started model staging_models.stg_airline
+16:44:28.736068 [debug]: Started rendering model staging_models.stg_airline
+16:44:28.737965 [debug]: Compiled SQL for node model.flight_dbt.fct_flights at target/.lsp/compiled/models/core/fct_flights.sql
+16:44:28.738065 [info ]:  Succeeded [  0.00s] model core_models.fct_flights (table)
+16:44:28.738093 [debug]: Finished rendering [  0.00s] model core_models.fct_flights [success]
+16:44:28.738213 [debug]: Compiled SQL for node model.flight_dbt.int_flight_airline at target/.lsp/compiled/models/intermediate/int_flight_airline.sql
+16:44:28.738270 [info ]:  Succeeded [  0.00s] model intermediate_models.int_flight_airline (table)
+16:44:28.738286 [debug]: Finished rendering [  0.00s] model intermediate_models.int_flight_airline [success]
+16:44:28.738292 [debug]: Compiled SQL for node model.flight_dbt.int_flight_routes_metrics at target/.lsp/compiled/models/intermediate/int_flight_routes_metrics.sql
+16:44:28.738306 [info ]:  Succeeded [  0.00s] model intermediate_models.int_flight_routes_metrics (table)
+16:44:28.738315 [debug]: Finished rendering [  0.00s] model intermediate_models.int_flight_routes_metrics [success]
+16:44:28.738322 [debug]: Compiled SQL for node model.flight_dbt.stg_arrivals at target/.lsp/compiled/models/staging/stg_arrivals.sql
+16:44:28.738338 [info ]:  Succeeded [  0.00s] model staging_models.stg_arrivals (view)
+16:44:28.738343 [debug]: Compiled SQL for node model.flight_dbt.dim_routes at target/.lsp/compiled/models/core/dim_routes.sql
+16:44:28.738359 [info ]:  Succeeded [  0.00s] model core_models.dim_routes (table)
+16:44:28.738363 [debug]: Finished rendering [  0.00s] model staging_models.stg_arrivals [success]
+16:44:28.738405 [debug]: Finished rendering [  0.00s] model core_models.dim_routes [success]
+16:44:28.738512 [debug]: Compiled SQL for node model.flight_dbt.int_flight_codeshare at target/.lsp/compiled/models/intermediate/int_flight_codeshare.sql
+16:44:28.738567 [info ]:  Succeeded [  0.00s] model intermediate_models.int_flight_codeshare (table)
+16:44:28.738575 [debug]: Compiled SQL for node model.flight_dbt.fct_codeshare at target/.lsp/compiled/models/core/fct_codeshare.sql
+16:44:28.738590 [debug]: Finished rendering [  0.00s] model intermediate_models.int_flight_codeshare [success]
+16:44:28.738596 [info ]:  Succeeded [  0.00s] model core_models.fct_codeshare (table)
+16:44:28.738606 [debug]: Finished rendering [  0.00s] model core_models.fct_codeshare [success]
+16:44:28.738612 [debug]: Compiled SQL for node model.flight_dbt.int_flight_airport at target/.lsp/compiled/models/intermediate/int_flight_airport.sql
+16:44:28.738647 [debug]: Compiled SQL for node model.flight_dbt.stg_flight_details at target/.lsp/compiled/models/staging/stg_flight_details.sql
+16:44:28.738649 [info ]:  Succeeded [  0.00s] model intermediate_models.int_flight_airport (table)
+16:44:28.738677 [debug]: Finished rendering [  0.00s] model intermediate_models.int_flight_airport [success]
+16:44:28.738667 [debug]: Compiled SQL for node model.flight_dbt.mart_codeshare_complexity at target/.lsp/compiled/models/marts/mart_codeshare_complexity.sql
+16:44:28.738713 [info ]:  Succeeded [  0.00s] model staging_models.stg_flight_details (view)
+16:44:28.738723 [debug]: Finished rendering [  0.00s] model staging_models.stg_flight_details [success]
+16:44:28.738736 [info ]:  Succeeded [  0.00s] model mart_models.mart_codeshare_complexity (table)
+16:44:28.738747 [debug]: Finished rendering [  0.00s] model mart_models.mart_codeshare_complexity [success]
+16:44:28.738877 [debug]: Compiled SQL for node model.flight_dbt.stg_codeshare at target/.lsp/compiled/models/staging/stg_codeshare.sql
+16:44:28.738969 [info ]:  Succeeded [  0.00s] model staging_models.stg_codeshare (view)
+16:44:28.738991 [debug]: Compiled SQL for node model.flight_dbt.int_flight_metrics at target/.lsp/compiled/models/intermediate/int_flight_metrics.sql
+16:44:28.739007 [info ]:  Succeeded [  0.00s] model intermediate_models.int_flight_metrics (table)
+16:44:28.739019 [debug]: Finished rendering [  0.00s] model staging_models.stg_codeshare [success]
+16:44:28.739026 [debug]: Finished rendering [  0.00s] model intermediate_models.int_flight_metrics [success]
+16:44:28.739014 [debug]: Compiled SQL for node model.flight_dbt.dim_airport at target/.lsp/compiled/models/core/dim_airport.sql
+16:44:28.739106 [info ]:  Succeeded [  0.00s] model core_models.dim_airport (table)
+16:44:28.739133 [debug]: Finished rendering [  0.00s] model core_models.dim_airport [success]
+16:44:28.739371 [debug]: Compiled SQL for node model.flight_dbt.mart_flight_performance at target/.lsp/compiled/models/marts/mart_flight_performance.sql
+16:44:28.739387 [debug]: Compiled SQL for node model.flight_dbt.mart_airport_operations at target/.lsp/compiled/models/marts/mart_airport_operations.sql
+16:44:28.739434 [debug]: Compiled SQL for node model.flight_dbt.mart_route_performance at target/.lsp/compiled/models/marts/mart_route_performance.sql
+16:44:28.739433 [info ]:  Succeeded [  0.00s] model mart_models.mart_flight_performance (table)
+16:44:28.739452 [info ]:  Succeeded [  0.00s] model mart_models.mart_airport_operations (table)
+16:44:28.739451 [debug]: Compiled SQL for node model.flight_dbt.mart_airline_performance at target/.lsp/compiled/models/marts/mart_airline_performance.sql
+16:44:28.739456 [debug]: Finished rendering [  0.00s] model mart_models.mart_flight_performance [success]
+16:44:28.739461 [debug]: Finished rendering [  0.00s] model mart_models.mart_airport_operations [success]
+16:44:28.739475 [info ]:  Succeeded [  0.00s] model mart_models.mart_route_performance (table)
+16:44:28.739484 [debug]: Finished rendering [  0.00s] model mart_models.mart_route_performance [success]
+16:44:28.739486 [debug]: Compiled SQL for node model.flight_dbt.stg_airports at target/.lsp/compiled/models/staging/stg_airports.sql
+16:44:28.739494 [info ]:  Succeeded [  0.00s] model mart_models.mart_airline_performance (table)
+16:44:28.739506 [debug]: Finished rendering [  0.00s] model mart_models.mart_airline_performance [success]
+16:44:28.739519 [info ]:  Succeeded [  0.00s] model staging_models.stg_airports (view)
+16:44:28.739528 [debug]: Finished rendering [  0.00s] model staging_models.stg_airports [success]
+16:44:28.739531 [debug]: Compiled SQL for node model.flight_dbt.stg_cities at target/.lsp/compiled/models/staging/stg_cities.sql
+16:44:28.739540 [debug]: Compiled SQL for node model.flight_dbt.stg_routes at target/.lsp/compiled/models/staging/stg_routes.sql
+16:44:28.739555 [info ]:  Succeeded [  0.00s] model staging_models.stg_cities (view)
+16:44:28.739570 [info ]:  Succeeded [  0.00s] model staging_models.stg_routes (view)
+16:44:28.739574 [debug]: Compiled SQL for node model.flight_dbt.int_routes_spine at target/.lsp/compiled/models/intermediate/int_routes_spine.sql
+16:44:28.739577 [debug]: Finished rendering [  0.00s] model staging_models.stg_routes [success]
+16:44:28.739580 [debug]: Finished rendering [  0.00s] model staging_models.stg_cities [success]
+16:44:28.739596 [info ]:  Succeeded [  0.00s] model intermediate_models.int_routes_spine (table)
+16:44:28.739605 [debug]: Finished rendering [  0.00s] model intermediate_models.int_routes_spine [success]
+16:44:28.739635 [debug]: Compiled SQL for node model.flight_dbt.int_flight_routes_spine at target/.lsp/compiled/models/intermediate/int_flight_routes_spine.sql
+16:44:28.739705 [info ]:  Succeeded [  0.00s] model intermediate_models.int_flight_routes_spine (table)
+16:44:28.739725 [debug]: Finished rendering [  0.00s] model intermediate_models.int_flight_routes_spine [success]
+16:44:28.739824 [debug]: Compiled SQL for node model.flight_dbt.dim_airline at target/.lsp/compiled/models/core/dim_airline.sql
+16:44:28.739834 [debug]: Compiled SQL for node model.flight_dbt.int_airport_geography at target/.lsp/compiled/models/intermediate/int_airport_geography.sql
+16:44:28.739856 [debug]: Compiled SQL for node model.flight_dbt.stg_countries at target/.lsp/compiled/models/staging/stg_countries.sql
+16:44:28.739880 [debug]: Compiled SQL for node model.flight_dbt.stg_airline at target/.lsp/compiled/models/staging/stg_airline.sql
+16:44:28.739878 [info ]:  Succeeded [  0.00s] model core_models.dim_airline (table)
+16:44:28.739905 [debug]: Finished rendering [  0.00s] model core_models.dim_airline [success]
+16:44:28.739915 [info ]:  Succeeded [  0.00s] model intermediate_models.int_airport_geography (table)
+16:44:28.739919 [debug]: Finished rendering [  0.00s] model intermediate_models.int_airport_geography [success]
+16:44:28.739940 [debug]: Compiled SQL for node model.flight_dbt.stg_departures at target/.lsp/compiled/models/staging/stg_departures.sql
+16:44:28.739952 [info ]:  Succeeded [  0.00s] model staging_models.stg_countries (view)
+16:44:28.739974 [debug]: Finished rendering [  0.00s] model staging_models.stg_countries [success]
+16:44:28.739985 [info ]:  Succeeded [  0.00s] model staging_models.stg_airline (view)
+16:44:28.739994 [debug]: Finished rendering [  0.00s] model staging_models.stg_airline [success]
+16:44:28.740035 [info ]:  Succeeded [  0.00s] model staging_models.stg_departures (view)
+16:44:28.740055 [debug]: Finished rendering [  0.00s] model staging_models.stg_departures [success]
+16:44:28.740064 [info ]: Finished rendering [  0.00s] (27 nodes, 0 skipped, 0 errors)
+16:44:28.742872 [info ]: Cached model count updated: 27 models (accurate)

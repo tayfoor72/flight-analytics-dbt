@@ -1,0 +1,1 @@
+{{ test_relationships(column_name="operating_airline_id", field="airline_id", model=get_where_subquery(ref('fct_flights')), to=ref('dim_airline')) }}

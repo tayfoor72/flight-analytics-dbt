@@ -1,0 +1,1 @@
+{{ test_not_null(column_name="scheduled_departure_time_utc", model=get_where_subquery(ref('fct_flights'))) }}

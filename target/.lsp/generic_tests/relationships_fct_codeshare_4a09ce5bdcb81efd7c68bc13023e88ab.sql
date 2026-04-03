@@ -1,0 +1,1 @@
+{{ test_relationships(column_name="marketing_airline_id", field="airline_id", model=get_where_subquery(ref('fct_codeshare')), to=ref('dim_airline')) }}

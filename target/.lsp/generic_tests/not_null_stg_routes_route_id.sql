@@ -1,0 +1,1 @@
+{{ test_not_null(column_name="route_id", model=get_where_subquery(ref('stg_routes'))) }}

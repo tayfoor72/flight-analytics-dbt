@@ -1,0 +1,1 @@
+{{ test_relationships(column_name="flight_id", field="flight_id", model=get_where_subquery(ref('fct_codeshare')), to=ref('fct_flights')) }}

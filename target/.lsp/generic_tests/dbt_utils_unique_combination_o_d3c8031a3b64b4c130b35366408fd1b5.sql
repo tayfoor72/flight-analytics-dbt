@@ -1,0 +1,1 @@
+{{ dbt_utils.test_unique_combination_of_columns(combination_of_columns=["operating_airline_id","marketing_airline_id"], model=get_where_subquery(ref('mart_codeshare_complexity'))) }}

@@ -1,0 +1,1 @@
+{{ test_not_null(column_name="arrival_airport_id", model=get_where_subquery(ref('int_routes_spine'))) }}

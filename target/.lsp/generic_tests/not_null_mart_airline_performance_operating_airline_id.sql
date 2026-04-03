@@ -1,0 +1,1 @@
+{{ test_not_null(column_name="operating_airline_id", model=get_where_subquery(ref('mart_airline_performance'))) }}

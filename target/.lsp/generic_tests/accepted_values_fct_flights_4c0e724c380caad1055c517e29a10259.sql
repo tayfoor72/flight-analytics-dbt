@@ -1,0 +1,1 @@
+{{ test_accepted_values(column_name="flight_status_clean", model=get_where_subquery(ref('fct_flights')), values=["landed","cancelled","data unavailable"]) }}

@@ -1,0 +1,1 @@
+{{ test_unique(column_name="codeshare_id", model=get_where_subquery(ref('stg_codeshare'))) }}

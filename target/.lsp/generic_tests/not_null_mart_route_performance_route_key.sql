@@ -1,0 +1,1 @@
+{{ test_not_null(column_name="route_key", model=get_where_subquery(ref('mart_route_performance'))) }}
