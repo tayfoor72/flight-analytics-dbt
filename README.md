@@ -37,7 +37,7 @@ AviationStack API
 └─────────────────────────────────────────────────────┘
        │
        ▼
-  Databricks (cloud warehouse)
+  GCP - Bigquery (cloud warehouse)
        │
        ▼
   Streamlit (viz/)
@@ -59,7 +59,7 @@ AviationStack API
 |---|---|
 | [AviationStack API](https://aviationstack.com/) | Data source — real-world flight data |
 | [dbt Core](https://docs.getdbt.com/) | Data transformation framework |
-| [Databricks](https://www.databricks.com/) | Cloud analytical data warehouse |
+| [GCP - Bigquery]((https://cloud.google.com/bigquery)) | Cloud analytical data warehouse |
 | [Streamlit](https://streamlit.io/) | Interactive data visualisation |
 | Python | API ingestion scripts |
 | dbt tests | Data quality validation |
@@ -96,7 +96,7 @@ flight-analytics-dbt/
 ### Prerequisites
 
 - Python 3.9+
-- dbt Core with Databricks adapter: `pip install dbt-bigquery`
+- dbt Core with Bigquery adapter: `pip install dbt-bigquery`
 
 ### Setup
 
