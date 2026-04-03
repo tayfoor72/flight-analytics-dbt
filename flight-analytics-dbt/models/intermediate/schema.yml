@@ -1,0 +1,247 @@
+version: 2
+
+models:
+  - name: int_airport_geography
+    columns:
+      - name: airport_id
+        tests:
+          - unique
+          - not_null
+      - name: country_id
+        tests:
+          - not_null:
+              severity: warn
+      - name: latitude
+        tests:
+          - dbt_utils.accepted_range:
+              min_value: -90
+              max_value: 90
+              severity: warn
+      - name: longitude
+        tests:
+          - dbt_utils.accepted_range:
+              min_value: -180
+              max_value: 180
+              severity: warn
+
+  - name: int_flight_airport
+    columns:
+      - name: flight_id
+        tests:
+          - unique
+          - not_null
+      - name: departure_airport_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_airports')
+              field: airport_id
+      - name: arrival_airport_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_airports')
+              field: airport_id
+      - name: flight_status
+        tests:
+          - accepted_values:
+              values: ['landed', 'cancelled']
+
+  - name: int_flight_airline
+    columns:
+      - name: flight_id
+        tests:
+          - unique
+          - not_null
+      - name: airline_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_airline')
+              field: airline_id
+      - name: flight_status
+        tests:
+          - accepted_values:
+              values: ['landed', 'cancelled']
+
+  - name: int_flight_routes_spine
+    description: "Joins flight details with route geometry, departure/arrival timestamps, and airport timezone data. UTC conversion applied here. No derived metrics."
+    columns:
+      - name: flight_id
+        description: "Unique identifier for a flight record."
+        tests:
+          - unique
+          - not_null
+
+      - name: route_key
+        description: "Deterministic key representing the route between departure and arrival airports."
+        tests:
+          - not_null
+
+      - name: departure_airport_id
+        description: "Airport identifier for the departure airport."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_airports')
+              field: airport_id
+
+      - name: arrival_airport_id
+        description: "Airport identifier for the arrival airport."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_airports')
+              field: airport_id
+
+      - name: route_distance_km
+        description: "Distance between departure and arrival airports in kilometers."
+        tests:
+          - dbt_utils.accepted_range:
+              min_value: 0
+              severity: warn
+
+      - name: flight_status
+        tests:
+          - accepted_values:
+              values: ['landed', 'cancelled']
+
+      - name: scheduled_departure_time_utc
+        description: "Scheduled departure time converted to UTC."
+        tests:
+          - not_null
+
+      - name: arrival_gate
+        description: "Arrival gate assigned by the airport. Nulls expected due to API data availability limitations."
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: arrival_baggage_claim
+        description: "Baggage claim belt assigned by the airport. Nulls expected due to API data availability limitations."
+        tests:
+          - not_null:
+              severity: warn
+
+  - name: int_flight_routes_metrics
+    description: "Derives delay, duration, and status metrics from int_flight_routes_spine. All flight timing business logic lives here."
+    columns:
+      - name: flight_id
+        description: "Unique identifier for a flight record."
+        tests:
+          - unique
+          - not_null
+
+      - name: flight_status_clean
+        description: "Cleaned status. 'data unavailable' flags landed flights missing actual arrival time."
+        tests:
+          - accepted_values:
+              values: ['landed', 'cancelled', 'data unavailable']
+
+      - name: actual_departure_time_utc
+        tests:
+          - not_null:
+              where: "is_cancelled = false"
+
+      - name: actual_arrival_time_utc
+        tests:
+          - not_null:
+              where: "flight_status_clean = 'landed'"
+
+      - name: scheduled_duration_minutes
+        description: "Scheduled flight duration in minutes. Null if either scheduled timestamp is missing."
+        tests:
+          - dbt_utils.accepted_range:
+              min_value: 0
+              max_value: 1440
+              severity: warn
+
+      - name: departure_delay_minutes
+        description: "Minutes between scheduled and actual departure. Null if outside -120 to 1440 range (timezone artefact)."
+        tests:
+          - dbt_utils.accepted_range:
+              min_value: -120
+              max_value: 1440
+              severity: warn
+
+      - name: arrival_delay_minutes
+        description: "Minutes between scheduled and actual arrival. Null if outside -120 to 1440 range (timezone artefact)."
+        tests:
+          - dbt_utils.accepted_range:
+              min_value: -120
+              max_value: 1440
+              severity: warn
+
+  - name: int_routes_spine
+    description: "Collapses flight-level route records to route grain. One row per unique departure-arrival airport pair."
+    columns:
+      - name: route_key
+        description: "Primary key. Derived key in format 'departure_airport_id-arrival_airport_id'."
+        tests:
+          - unique
+          - not_null
+      - name: departure_airport_id
+        description: "Airport identifier for the departure airport."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_airports')
+              field: airport_id
+      - name: arrival_airport_id
+        description: "Airport identifier for the arrival airport."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_airports')
+              field: airport_id
+      - name: route_distance_km
+        description: "Average distance in kilometres between departure and arrival airports."
+        tests:
+          - dbt_utils.accepted_range:
+              min_value: 0
+              severity: warn
+
+  - name: int_flight_metrics
+    description: "Pre-classifies each flight with performance flags and operated-only columns. Single source of truth for on-time, delayed, and cancelled business rules."
+    columns:
+      - name: flight_id
+        description: "Unique identifier for a flight record."
+        tests:
+          - unique
+          - not_null
+      - name: cancelled_flag
+        description: "Integer representation of is_cancelled (1 = cancelled, 0 = operated). For use in sum() aggregations."
+      - name: is_on_time_departure
+        description: "1 if the flight departed fewer than 15 minutes late and was not cancelled, else 0."
+      - name: is_delayed_departure
+        description: "1 if the flight departed 15 or more minutes late and was not cancelled, else 0."
+      - name: is_on_time_arrival
+        description: "1 if the flight arrived fewer than 15 minutes late and was not cancelled, else 0."
+      - name: is_delayed_arrival
+        description: "1 if the flight arrived 15 or more minutes late and was not cancelled, else 0."
+
+  - name: int_flight_codeshare
+    columns:
+      - name: flight_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_flight_details')
+              field: flight_id
+      - name: operating_airline_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_airline')
+              field: airline_id
+      - name: marketing_airline_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_airline')
+              field: airline_id
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - flight_id
+            - marketing_airline_id

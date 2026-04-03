@@ -1,0 +1,36 @@
+==================== 2026-04-03T16:19:43.218703Z | 019d5424-ade5-7870-b5c1-40e71783c2dd ====================
+16:19:43.221520 [info ]: Installing dbt project and profile setup
+16:19:43.223948 [info ]: Warning A dbt_project.yml already exists in this directory; skipping sample project creation.
+16:19:43.225754 [info ]: Info Created .vscode/extensions.json with dbt extension recommendation
+16:19:43.228460 [info ]: Info Setting up your profile...
+16:19:43.234648 [info ]: Info Creating new profile...
+16:19:51.902715 [info ]: No dbt_cloud.yml found - proceeding without cloud pre-population
+16:22:57.461251 [info ]: Success Profile written to /Users/tayfoorahmed/.dbt/profiles.yml
+16:22:57.462312 [info ]: Validating profile inputs, adapters, and connection
+
+16:22:57.462772 [info ]: dbt-fusion 2.0.0-preview.154
+16:22:57.465098 [info ]: Started loading project
+16:22:57.484379 [info ]: Loading ~/.dbt/profiles.yml
+16:22:57.497656 [info ]: Finished loading project [  0.03s]
+16:22:57.498863 [info ]: Started debugging
+16:22:57.499056 [info ]: Debugging profile: dev
+16:22:57.499077 [info ]: Debugging dbt version: 2.0.0-preview.154
+16:22:57.499086 [info ]: Debugging platform: macos aarch64 (unix)
+16:22:57.499225 [info ]: Debugging adapter type: bigquery (remote)
+16:22:57.518945 [info ]: Debugging dependencies:
+  git: OK
+16:22:57.520918 [info ]: Debugging connection:
+  "database": "flight-analytics-dbt",
+  "schema": "flights",
+  "method": "oauth",
+  "location": "europe-west2",
+  "dataproc_batch": null
+16:23:04.339337 [debug]: Query executed on node unknown:
+select 1 as id
+16:23:04.340979 [info ]: Debugging connection test: OK
+16:23:04.341642 [info ]: Debugged All checks passed!
+16:23:04.341741 [info ]: Finished debugging [  6.84s]
+16:23:04.918139 [info ]: New version available 2.0.0-preview.164 (run `dbt system update`)
+16:23:05.135753 [info ]: 
+==================== Execution Summary =====================
+Finished 'init' successfully for target 'dev' [3m 22s]
