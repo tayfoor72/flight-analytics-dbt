@@ -25,3 +25,5 @@ keyfile*.json
 # Environment variables
 .env
 *.env
+logs/
+target/
