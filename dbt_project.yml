@@ -36,11 +36,11 @@ models:
       +schema: staging_models
 
     intermediate:
-      +materialized: table
+      +materialized: ephemeral
       +schema: intermediate_models
 
     core:
-      +materialized: table
+      +materialized: incremental
       +schema: core_models
 
     marts:
