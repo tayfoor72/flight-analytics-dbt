@@ -15,6 +15,6 @@ left join {{ ref('stg_airline') }} op
     on fd.airline_id = op.airline_id
 
 left join {{ ref('stg_airline') }} mk
-    on c.marketing_airline_id = mk.airline_id ;
+    on c.marketing_airline_id = mk.airline_id
 
 

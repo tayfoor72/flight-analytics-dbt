@@ -8,6 +8,6 @@ select
     route_key,
     departure_airport_id,
     arrival_airport_id,
-    avg(route_distance_km) as route_distance_km
+    avg(safe_cast(route_distance_km as float64)) as route_distance_km
 from {{ ref('int_flight_routes_spine') }}
 group by route_key, departure_airport_id, arrival_airport_id
