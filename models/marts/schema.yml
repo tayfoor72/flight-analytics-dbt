@@ -9,15 +9,17 @@ models:
         tests:
           - not_null
           - relationships:
-              to: ref('dim_routes')
-              field: route_key
+              arguments:
+                to: ref('dim_routes')
+                field: route_key
       - name: operating_airline_id
         description: "Grain key. Foreign key to dim_airline for the operating airline."
         tests:
           - not_null
           - relationships:
-              to: ref('dim_airline')
-              field: airline_id
+              arguments:
+                to: ref('dim_airline')
+                field: airline_id
       - name: flight_date
         description: "Grain key. Date the flights were scheduled to operate."
         tests:
@@ -26,21 +28,26 @@ models:
         description: "Total number of flights for this route, airline, and date combination."
         tests:
           - dbt_utils.accepted_range:
-              min_value: 1
-              severity: warn
+              arguments:
+                min_value: 1
+              config:
+                severity: warn
       - name: cancellation_rate
         description: "Proportion of flights cancelled. Value between 0 and 1."
         tests:
           - dbt_utils.accepted_range:
-              min_value: 0
-              max_value: 1
-              severity: warn
+              arguments:
+                min_value: 0
+                max_value: 1
+              config:
+                severity: warn
     tests:
       - dbt_utils.unique_combination_of_columns:
-          combination_of_columns:
-            - route_key
-            - operating_airline_id
-            - flight_date
+          arguments:
+            combination_of_columns:
+              - route_key
+              - operating_airline_id
+              - flight_date
 
   - name: mart_route_performance
     description: "Route-level flight performance metrics aggregated across all airlines and dates."
@@ -51,27 +58,34 @@ models:
           - unique
           - not_null
           - relationships:
-              to: ref('dim_routes')
-              field: route_key
+              arguments:
+                to: ref('dim_routes')
+                field: route_key
       - name: total_flights
         description: "Total number of flights operated on this route."
         tests:
           - dbt_utils.accepted_range:
-              min_value: 0
-              severity: warn
+              arguments:
+                min_value: 0
+              config:
+                severity: warn
       - name: airlines_competing
         description: "Number of distinct airlines operating this route."
         tests:
           - dbt_utils.accepted_range:
-              min_value: 0
-              severity: warn
+              arguments:
+                min_value: 0
+              config:
+                severity: warn
       - name: cancellation_rate
         description: "Proportion of flights cancelled. Value between 0 and 1."
         tests:
           - dbt_utils.accepted_range:
-              min_value: 0
-              max_value: 1
-              severity: warn
+              arguments:
+                min_value: 0
+                max_value: 1
+              config:
+                severity: warn
 
   - name: mart_airport_operations
     description: "Airport-level flight operations metrics aggregated across all departures and arrivals."
@@ -82,26 +96,33 @@ models:
           - unique
           - not_null
           - relationships:
-              to: ref('dim_airport')
-              field: airport_id
+              arguments:
+                to: ref('dim_airport')
+                field: airport_id
       - name: total_departures
         description: "Total number of flights departing from this airport."
         tests:
           - dbt_utils.accepted_range:
-              min_value: 0
-              severity: warn
+              arguments:
+                min_value: 0
+              config:
+                severity: warn
       - name: total_arrivals
         description: "Total number of flights arriving at this airport."
         tests:
           - dbt_utils.accepted_range:
-              min_value: 0
-              severity: warn
+              arguments:
+                min_value: 0
+              config:
+                severity: warn
       - name: total_movements
         description: "Total traffic at the airport. Sum of total_departures and total_arrivals."
         tests:
           - dbt_utils.accepted_range:
-              min_value: 0
-              severity: warn
+              arguments:
+                min_value: 0
+              config:
+                severity: warn
 
   - name: mart_airline_performance
     description: "Airline-level flight performance metrics aggregated across all routes and dates."
@@ -112,27 +133,34 @@ models:
           - unique
           - not_null
           - relationships:
-              to: ref('dim_airline')
-              field: airline_id
+              arguments:
+                to: ref('dim_airline')
+                field: airline_id
       - name: total_flights
         description: "Total number of flights operated by the airline."
         tests:
           - dbt_utils.accepted_range:
-              min_value: 1
-              severity: warn
+              arguments:
+                min_value: 1
+              config:
+                severity: warn
       - name: total_routes_served
         description: "Number of distinct routes operated by the airline."
         tests:
           - dbt_utils.accepted_range:
-              min_value: 1
-              severity: warn
+              arguments:
+                min_value: 1
+              config:
+                severity: warn
       - name: cancellation_rate
         description: "Proportion of flights cancelled. Value between 0 and 1."
         tests:
           - dbt_utils.accepted_range:
-              min_value: 0
-              max_value: 1
-              severity: warn
+              arguments:
+                min_value: 0
+                max_value: 1
+              config:
+                severity: warn
 
   - name: mart_codeshare_complexity
     description: "Codeshare partnership metrics. One row per operating airline + marketing airline pair."
@@ -142,42 +170,53 @@ models:
         tests:
           - not_null
           - relationships:
-              to: ref('dim_airline')
-              field: airline_id
+              arguments:
+                to: ref('dim_airline')
+                field: airline_id
       - name: marketing_airline_id
         description: "Grain key. Foreign key to dim_airline for the airline selling the ticket."
         tests:
           - not_null
           - relationships:
-              to: ref('dim_airline')
-              field: airline_id
+              arguments:
+                to: ref('dim_airline')
+                field: airline_id
       - name: total_codeshare_flights
         description: "Total number of flights in this operating + marketing airline partnership."
         tests:
           - dbt_utils.accepted_range:
-              min_value: 1
-              severity: warn
+              arguments:
+                min_value: 1
+              config:
+                severity: warn
       - name: total_routes_shared
         description: "Number of distinct routes shared between the operating and marketing airline."
         tests:
           - dbt_utils.accepted_range:
-              min_value: 1
-              severity: warn
+              arguments:
+                min_value: 1
+              config:
+                severity: warn
       - name: total_true_codeshares
         description: "Number of flights where the operating and marketing airline differ."
         tests:
           - dbt_utils.accepted_range:
-              min_value: 0
-              severity: warn
+              arguments:
+                min_value: 0
+              config:
+                severity: warn
       - name: codeshare_rate
         description: "Proportion of flights that are true codeshares. Value between 0 and 1."
         tests:
           - dbt_utils.accepted_range:
-              min_value: 0
-              max_value: 1
-              severity: warn
+              arguments:
+                min_value: 0
+                max_value: 1
+              config:
+                severity: warn
     tests:
       - dbt_utils.unique_combination_of_columns:
-          combination_of_columns:
-            - operating_airline_id
-            - marketing_airline_id
+          arguments:
+            combination_of_columns:
+              - operating_airline_id
+              - marketing_airline_id

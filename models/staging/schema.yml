@@ -46,7 +46,8 @@ models:
         description: "Foreign key to stg_cities."
         tests:
           - not_null:
-              severity: warn
+              config:
+                severity: warn
       - name: airport_timezone_name
         description: "IANA timezone name for the airport (e.g. Europe/London). Used for UTC conversion."
       - name: airport_gmt_offset
@@ -172,7 +173,8 @@ models:
         description: "Raw flight status from the source API."
         tests:
           - accepted_values:
-              values: ['landed', 'cancelled']
+              arguments:
+                values: ['landed', 'cancelled']
       - name: flight_number
         description: "Airline-assigned flight number."
       - name: flight_icao
@@ -247,14 +249,16 @@ models:
         description: "Geographic latitude of the city in decimal degrees."
         tests:
           - dbt_utils.accepted_range:
-              min_value: -90
-              max_value: 90
+              arguments:
+                min_value: -90
+                max_value: 90
       - name: longitude
         description: "Geographic longitude of the city in decimal degrees."
         tests:
           - dbt_utils.accepted_range:
-              min_value: -180
-              max_value: 180
+              arguments:
+                min_value: -180
+                max_value: 180
       - name: city_timezone
         description: "IANA timezone name for the city."
       - name: city_gmt_offset
@@ -282,6 +286,7 @@ models:
         description: "Name of the marketing airline."
     tests:
       - dbt_utils.unique_combination_of_columns:
-          combination_of_columns:
-            - flight_id
-            - marketing_airline_id
+          arguments:
+            combination_of_columns:
+              - flight_id
+              - marketing_airline_id
