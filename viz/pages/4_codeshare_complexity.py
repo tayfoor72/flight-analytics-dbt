@@ -11,7 +11,7 @@ st.title("🔗 Codeshare Complexity")
 st.caption("How do marketing airlines and operating airlines interact?")
 st.divider()
 
-df = query("SELECT * FROM workspace.mart_models.mart_codeshare_complexity")
+df = query("SELECT * FROM `flight-analytics-dbt`.mart_models.mart_codeshare_complexity")
 
 # sidebar filter
 with st.sidebar:

@@ -7,7 +7,7 @@ st.set_page_config(
 )
 
 st.title("✈️ Flight Analytics")
-st.markdown("An end-to-end analytics engineering project modelling real-world flight data from the AviationStack API using **dbt** and **Databricks**.")
+st.markdown("An end-to-end analytics engineering project modelling real-world flight data from the AviationStack API using **dbt** and **BigQuery**.")
 
 st.divider()
 
@@ -37,7 +37,7 @@ st.divider()
 
 st.markdown(
     """
-    **Stack:** AviationStack API · dbt Core · Databricks · Streamlit · Plotly
+    **Stack:** AviationStack API · dbt Core · BigQuery · Streamlit · Plotly
 
     **Source:** [github.com/efuatutuwaa/flight-analytics-dbt](https://github.com/efuatutuwaa/flight-analytics-dbt)
     """

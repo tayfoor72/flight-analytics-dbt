@@ -11,7 +11,7 @@ st.title("🏷️ Airline Performance")
 st.caption("Which airlines operate the most flights and which perform best?")
 st.divider()
 
-df = query("SELECT * FROM workspace.mart_models.mart_airline_performance")
+df = query("SELECT * FROM `flight-analytics-dbt`.mart_models.mart_airline_performance")
 
 # sidebar filter
 with st.sidebar:

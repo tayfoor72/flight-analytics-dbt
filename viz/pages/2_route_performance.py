@@ -11,7 +11,7 @@ st.title("🗺️ Route Performance")
 st.caption("Which routes are efficient and which are problematic?")
 st.divider()
 
-df = query("SELECT * FROM workspace.mart_models.mart_route_performance")
+df = query("SELECT * FROM `flight-analytics-dbt`.mart_models.mart_route_performance")
 
 # sidebar filter
 with st.sidebar:

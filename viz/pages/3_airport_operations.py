@@ -11,7 +11,7 @@ st.title("🏢 Airport Operations")
 st.caption("Which airports are busiest or causing operational bottlenecks?")
 st.divider()
 
-df = query("SELECT * FROM workspace.mart_models.mart_airport_operations")
+df = query("SELECT * FROM `flight-analytics-dbt`.mart_models.mart_airport_operations")
 
 # sidebar filter
 with st.sidebar:
