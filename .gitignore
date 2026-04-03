@@ -1,0 +1,27 @@
+# dbt
+target/
+dbt_packages/
+logs/
+.dbt/
+
+# Python / venv
+.venv/
+dbt-env/
+__pycache__/
+*.pyc
+.python-version
+
+# BigQuery / GCP
+*.json
+service-account*.json
+keyfile*.json
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Environment variables
+.env
+*.env
