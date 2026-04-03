@@ -25,9 +25,9 @@ cleaned as(
         fleet_average_age as airline_fleet_average_age,
 
         --founded year (handling ingestion artefacts)
-        case 
-            when date_founded = 1900 then null
-            else date_founded
+        case
+            when safe_cast(date_founded as int64) = 1900 then null
+            else safe_cast(date_founded as int64)
         end as airline_year_founded
     from source
 )

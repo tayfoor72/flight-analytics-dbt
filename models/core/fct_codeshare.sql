@@ -24,4 +24,4 @@ select
 
 from {{ ref('int_flight_codeshare') }} cs
 left join {{ ref('int_flight_routes_metrics') }} fr
-    on cs.flight_id = fr.flight_id;
+    on cs.flight_id = fr.flight_id

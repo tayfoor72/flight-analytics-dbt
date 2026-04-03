@@ -56,30 +56,30 @@ select
     case
         when scheduled_departure_time_utc is null
             or scheduled_arrival_time_utc is null then null
-        else timestampdiff(minute, scheduled_departure_time_utc, scheduled_arrival_time_utc)
+        else TIMESTAMP_DIFF(scheduled_arrival_time_utc, scheduled_departure_time_utc, MINUTE)
     end as scheduled_duration_minutes,
 
     case
         when actual_departure_time_utc is null
             or actual_arrival_time_utc is null then null
-        else timestampdiff(minute, actual_departure_time_utc, actual_arrival_time_utc)
+        else TIMESTAMP_DIFF(actual_arrival_time_utc, actual_departure_time_utc, MINUTE)
     end as actual_duration_minutes,
 
     -- delay metrics (null-guarded + range-clamped to exclude timezone/API artefacts)
     case
         when actual_departure_time_utc is null
             or scheduled_departure_time_utc is null then null
-        when timestampdiff(minute, scheduled_departure_time_utc, actual_departure_time_utc)
+        when TIMESTAMP_DIFF(actual_departure_time_utc, scheduled_departure_time_utc, MINUTE)
             not between -120 and 1440 then null
-        else timestampdiff(minute, scheduled_departure_time_utc, actual_departure_time_utc)
+        else TIMESTAMP_DIFF(actual_departure_time_utc, scheduled_departure_time_utc, MINUTE)
     end as departure_delay_minutes,
 
     case
         when actual_arrival_time_utc is null
             or scheduled_arrival_time_utc is null then null
-        when timestampdiff(minute, scheduled_arrival_time_utc, actual_arrival_time_utc)
+        when TIMESTAMP_DIFF(actual_arrival_time_utc, scheduled_arrival_time_utc, MINUTE)
             not between -120 and 1440 then null
-        else timestampdiff(minute, scheduled_arrival_time_utc, actual_arrival_time_utc)
+        else TIMESTAMP_DIFF(actual_arrival_time_utc, scheduled_arrival_time_utc, MINUTE)
     end as arrival_delay_minutes
 
 from {{ ref('int_flight_routes_spine') }}

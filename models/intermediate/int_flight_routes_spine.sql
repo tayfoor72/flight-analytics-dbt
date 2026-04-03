@@ -38,25 +38,12 @@ select
     arr.arrival_baggage_claim,
 
     -- utc times
-    to_utc_timestamp(
-        dep.scheduled_departure_time,
-        coalesce(nullif(nullif(dep_geo.airport_timezone_name, ''), 'Unknown'), 'UTC')
-    ) as scheduled_departure_time_utc,
-
-    to_utc_timestamp(
-        arr.scheduled_arrival_time,
-        coalesce(nullif(nullif(arr_geo.airport_timezone_name, ''), 'Unknown'), 'UTC')
-    ) as scheduled_arrival_time_utc,
-
-    to_utc_timestamp(
-        dep.actual_departure_time,
-        coalesce(nullif(nullif(dep_geo.airport_timezone_name, ''), 'Unknown'), 'UTC')
-    ) as actual_departure_time_utc,
-
-    to_utc_timestamp(
-        arr.actual_arrival_time,
-        coalesce(nullif(nullif(arr_geo.airport_timezone_name, ''), 'Unknown'), 'UTC')
-    ) as actual_arrival_time_utc
+    -- AviationStack returns ISO 8601 strings with embedded tz offset (e.g. 2024-01-01T10:30:00+02:00).
+    -- SAFE.TIMESTAMP() parses the offset and converts to UTC; returns null on unparseable values.
+    SAFE.TIMESTAMP(dep.scheduled_departure_time) as scheduled_departure_time_utc,
+    SAFE.TIMESTAMP(arr.scheduled_arrival_time)   as scheduled_arrival_time_utc,
+    SAFE.TIMESTAMP(dep.actual_departure_time)    as actual_departure_time_utc,
+    SAFE.TIMESTAMP(arr.actual_arrival_time)      as actual_arrival_time_utc
 
 from {{ ref('stg_flight_details') }} fd
 left join {{ ref('stg_routes') }} r
