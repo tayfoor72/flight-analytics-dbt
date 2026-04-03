@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: flights
-    catalog: workspace
+    database: workspace
     schema: flight_analytics
     tables:
       - name: airline
