@@ -1,1 +1,0 @@
-{{ test_not_null(column_name="flight_date", model=get_where_subquery(ref('mart_flight_performance'))) }}

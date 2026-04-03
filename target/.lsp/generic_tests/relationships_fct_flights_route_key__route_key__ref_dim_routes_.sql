@@ -1,1 +1,0 @@
-{{ test_relationships(column_name="route_key", field="route_key", model=get_where_subquery(ref('fct_flights')), to=ref('dim_routes')) }}

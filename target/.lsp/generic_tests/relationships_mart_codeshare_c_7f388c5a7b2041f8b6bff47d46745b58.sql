@@ -1,1 +1,0 @@
-{{ test_relationships(column_name="operating_airline_id", field="airline_id", model=get_where_subquery(ref('mart_codeshare_complexity')), to=ref('dim_airline')) }}

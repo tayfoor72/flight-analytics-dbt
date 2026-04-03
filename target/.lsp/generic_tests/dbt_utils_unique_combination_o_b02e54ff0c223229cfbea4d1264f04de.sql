@@ -1,1 +1,0 @@
-{{ dbt_utils.test_unique_combination_of_columns(combination_of_columns=["route_key","operating_airline_id","flight_date"], model=get_where_subquery(ref('mart_flight_performance'))) }}

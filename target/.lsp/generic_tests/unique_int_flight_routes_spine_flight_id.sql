@@ -1,1 +1,0 @@
-{{ test_unique(column_name="flight_id", model=get_where_subquery(ref('int_flight_routes_spine'))) }}

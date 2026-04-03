@@ -1,1 +1,0 @@
-{{ test_not_null(column_name="scheduled_departure_time", model=get_where_subquery(ref('stg_departures'))) }}

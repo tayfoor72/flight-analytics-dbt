@@ -1,1 +1,0 @@
-{{ test_accepted_values(column_name="flight_status", model=get_where_subquery(ref('int_flight_airport')), values=["landed","cancelled"]) }}
