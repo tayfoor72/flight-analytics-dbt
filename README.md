@@ -96,7 +96,7 @@ flight-analytics-dbt/
 ### Prerequisites
 
 - Python 3.9+
-- dbt Core with Databricks adapter: `pip install dbt-databricks`
+- dbt Core with Databricks adapter: `pip install dbt-bigquery`
 
 ### Setup
 
