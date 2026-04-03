@@ -28,3 +28,4 @@ keyfile*.json
 logs/
 target/
 dbt_internal_packages/
+CLAUDE.md
