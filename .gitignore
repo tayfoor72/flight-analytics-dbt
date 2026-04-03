@@ -27,3 +27,4 @@ keyfile*.json
 *.env
 logs/
 target/
+dbt_internal_packages/
